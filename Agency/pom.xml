@@ -5,6 +5,13 @@
     <artifactId>Agency</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <repositories>
+        <repository>
+            <id>unknown-jars-temp-repo</id>
+            <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+            <url>file:${project.basedir}/lib</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>
@@ -58,9 +65,33 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4-1201-jdbc41</version>
+            <groupId>com.kenai.nbpwr</groupId>
+            <artifactId>org-jdesktop-swingx</artifactId>
+            <version>1.6-201002261215</version>
+            <type>nbm</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.swinglabs</groupId>
+                    <artifactId>swingx</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>nl.cloudfarming.client</groupId>
+            <artifactId>lib-swingx</artifactId>
+            <version>1.6.2-NB80-NO-WS</version>
+            <type>nbm</type>
+        </dependency>
+        <!--dependency>
+            <groupId>unknown.binary</groupId>
+            <artifactId>DateChooser</artifactId>
+            <version>SNAPSHOT</version>
+        </dependency-->
+        <dependency>
+            <groupId>JDateChooser</groupId>
+            <artifactId>JDateChooser</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
     <properties>
