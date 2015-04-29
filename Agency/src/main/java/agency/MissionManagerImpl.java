@@ -6,7 +6,6 @@
 package agency;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,12 +20,8 @@ import org.apache.log4j.Logger;
  * @author martin
  */
 public class MissionManagerImpl implements MissionManager {
-    
-     //"jdbc:derby://localhost:1527/AgencyDB"
-     //"jdbc:derby:memory:Agency"
-     private final String databaseURL = "jdbc:derby:memory:Agency";
      
-     Logger log = Logger.getLogger(Agency.class);
+     private final Logger log = Logger.getLogger(Agency.class);
     
      private DataSource dataSource;
 
@@ -46,14 +41,15 @@ public class MissionManagerImpl implements MissionManager {
         }
 
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("INSERT INTO APP.Missions (beginDate,endDate,difficulty,capacity,note) VALUES (?,?,?,?,?)",
+            try (PreparedStatement st = conn.prepareStatement("INSERT INTO APP.Missions (\"name\",beginDate,endDate,difficulty,capacity,note) VALUES (?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS)) {
 
-                st.setDate(1, new java.sql.Date(mission.getBeginDate().getTime()));
-                st.setDate(2, new java.sql.Date(mission.getEndDate().getTime()));
-                st.setInt(3, mission.getDifficulty());
-                st.setInt(4, mission.getCapacity());
-                st.setString(5, mission.getNote());
+                st.setString(1, mission.getName());
+                st.setDate(2, new java.sql.Date(mission.getBeginDate().getTime()));
+                st.setDate(3, new java.sql.Date(mission.getEndDate().getTime()));
+                st.setInt(4, mission.getDifficulty());
+                st.setInt(5, mission.getCapacity());
+                st.setString(6, mission.getNote());
 
                 int addedRows = st.executeUpdate();
 
@@ -65,7 +61,7 @@ public class MissionManagerImpl implements MissionManager {
                 mission.setId(getKey(keyRS, mission));
             }
         } catch (SQLException ex) {
-            //log.error("DB connection problem", ex);
+            log.error("DB connection problem", ex);
             throw new IllegalStateException("Error connecting to the DB", ex);
         }
 
@@ -83,21 +79,22 @@ public class MissionManagerImpl implements MissionManager {
         }
 
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("UPDATE APP.Missions SET beginDate=?,endDate=?,difficulty=?,capacity=?,note=? WHERE id=?")) {
+            try (PreparedStatement st = conn.prepareStatement("UPDATE APP.Missions SET \"name\"=?,beginDate=?,endDate=?,difficulty=?,capacity=?,note=? WHERE id=?")) {
 
-                st.setDate(1, new java.sql.Date(mission.getBeginDate().getTime()));
-                st.setDate(2, new java.sql.Date(mission.getEndDate().getTime()));
-                st.setInt(3, mission.getDifficulty());
+                st.setString(1, mission.getName());
+                st.setDate(2, new java.sql.Date(mission.getBeginDate().getTime()));
+                st.setDate(3, new java.sql.Date(mission.getEndDate().getTime()));
                 st.setInt(4, mission.getDifficulty());
-                st.setInt(5, mission.getCapacity());
-                st.setLong(6, mission.getId());
+                st.setInt(5, mission.getDifficulty());
+                st.setInt(6, mission.getCapacity());
+                st.setLong(7, mission.getId());
 
                 if (st.executeUpdate() != 1) {
                     throw new IllegalArgumentException("Can not update mission: " + mission);
                 }
             }
         } catch (SQLException ex) {
-            //log.error("DB connection problem", ex);
+            log.error("DB connection problem", ex);
             throw new IllegalStateException("Error connecting to the DB", ex);
         }
     }
@@ -114,6 +111,8 @@ public class MissionManagerImpl implements MissionManager {
             throw new IllegalArgumentException("Mission not created.");
         }
 
+        //why comment ??
+        
        /* Mission missionDB = findMissionById(mission.getId());
 
         if (!mission.getBeginDate().equals(missionDB.getBeginDate())) {
@@ -131,7 +130,7 @@ public class MissionManagerImpl implements MissionManager {
         if (!mission.getNote().equals(missionDB.getNote())) {
             throw new IllegalArgumentException("Note does not match.");
         }*/
-
+        
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("DELETE FROM APP.Missions WHERE id=?")) {
                 st.setLong(1, mission.getId());
@@ -141,7 +140,7 @@ public class MissionManagerImpl implements MissionManager {
                 }
             }
         } catch (SQLException ex) {
-            //log.error("db connection problem", ex);
+            log.error("db connection problem", ex);
             throw new IllegalStateException("Error when retrieving all missions", ex);
         }
 
@@ -157,7 +156,7 @@ public class MissionManagerImpl implements MissionManager {
         }
 
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("SELECT id,beginDate,endDate,capacity,difficulty,note FROM APP.Missions WHERE id=?")) {
+            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",beginDate,endDate,capacity,difficulty,note FROM APP.Missions WHERE id=?")) {
                 st.setLong(1, missionId);
                 ResultSet rs = st.executeQuery();
                 if (rs.next()) {
@@ -173,7 +172,7 @@ public class MissionManagerImpl implements MissionManager {
                 }
             }
         } catch (SQLException ex) {
-            //log.error("db connection problem", ex);
+            log.error("db connection problem", ex);
             throw new IllegalStateException("Error when retrieving all graves", ex);
         }
     }
@@ -184,7 +183,7 @@ public class MissionManagerImpl implements MissionManager {
         log.debug("findAllMissions called");
         
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("SELECT id,beginDate,endDate,capacity,difficulty,note FROM APP.Missions")) {
+            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",beginDate,endDate,capacity,difficulty,note FROM APP.Missions")) {
                 ResultSet rs = st.executeQuery();
                 List<Mission> result = new ArrayList<>();
                 while (rs.next()) {
@@ -193,7 +192,7 @@ public class MissionManagerImpl implements MissionManager {
                 return result;
             }
         } catch (SQLException ex) {
-            //log.error("db connection problem", ex);
+            log.error("db connection problem", ex);
             throw new IllegalStateException("Error when retrieving all missions", ex);
         }
     }
@@ -246,6 +245,7 @@ public class MissionManagerImpl implements MissionManager {
     private Mission resultSetToMission(ResultSet rs) throws SQLException {
         Mission mission = new Mission();
         mission.setId(rs.getLong("id"));
+        mission.setName(rs.getString("name"));
         mission.setBeginDate(rs.getDate("beginDate"));
         mission.setEndDate(rs.getDate("endDate"));
         mission.setCapacity(rs.getInt("capacity"));

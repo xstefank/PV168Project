@@ -13,6 +13,7 @@ import java.util.Date;
  */
 public class Mission {
     private Long id;
+    private String name;
     private Date beginDate;
     private Date endDate;
     private int difficulty;
@@ -28,6 +29,14 @@ public class Mission {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getBeginDate() {

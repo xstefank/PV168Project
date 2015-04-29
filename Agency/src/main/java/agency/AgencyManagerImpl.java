@@ -50,7 +50,7 @@ public class AgencyManagerImpl implements AgencyManager {
         
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement(
-                                             "SELECT APP.Missions.id, beginDate, endDate, capacity, difficulty, APP.Missions.note " +
+                                             "SELECT APP.Missions.id, APP.Missions.\"name\", beginDate, endDate, capacity, difficulty, APP.Missions.note " +
                                              "FROM APP.Missions JOIN APP.Agents ON APP.Missions.id = APP.Agents.missionId " +
                                              "WHERE APP.Agents.id = ?")) {
                                                  
@@ -82,7 +82,7 @@ public class AgencyManagerImpl implements AgencyManager {
         
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement(
-                                            "SELECT APP.Agents.id,\"name\",born,level,APP.Agents.note " + 
+                                            "SELECT APP.Agents.id,APP.Agents.\"name\",born,level,APP.Agents.note " + 
                                             "FROM APP.Missions JOIN APP.Agents ON APP.Missions.id = APP.Agents.missionId " +
                                             "WHERE APP.Missions.id = ?")) {
                 st.setLong(1, mission.getId());
@@ -249,6 +249,7 @@ public class AgencyManagerImpl implements AgencyManager {
     private Mission resultSetToMission(ResultSet rs) throws SQLException {
         Mission mission = new Mission();
         mission.setId(rs.getLong("id"));
+        mission.setName(rs.getString("name"));
         mission.setBeginDate(rs.getDate("beginDate"));
         mission.setEndDate(rs.getDate("endDate"));
         mission.setCapacity(rs.getInt("capacity"));

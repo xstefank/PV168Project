@@ -5,18 +5,14 @@
  */
 package agency;
 
-import common.DBUtils;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.log4j.Logger;
 
-import org.apache.derby.jdbc.EmbeddedDriver;
 
 /**
  *

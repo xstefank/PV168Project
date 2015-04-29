@@ -42,7 +42,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
-        editDialog = new javax.swing.JDialog();
+        editAgentDialog = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -56,20 +56,66 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jButton7 = new javax.swing.JButton();
-        deleteDialog = new javax.swing.JDialog();
+        deleteAgentDialog = new javax.swing.JDialog();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        findDialog = new javax.swing.JDialog();
+        findAgentDialog = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        addMissionDialog = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        dateChooserCombo4 = new datechooser.beans.DateChooserCombo();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        add = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        dateChooserCombo5 = new datechooser.beans.DateChooserCombo();
+        jLabel20 = new javax.swing.JLabel();
+        editMissionDialog = new javax.swing.JDialog();
+        jLabel22 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        dateChooserCombo6 = new datechooser.beans.DateChooserCombo();
+        jLabel25 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        add1 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        dateChooserCombo7 = new datechooser.beans.DateChooserCombo();
+        deleteMissionDialog = new javax.swing.JDialog();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jLabel30 = new javax.swing.JLabel();
+        findMissionDialog = new javax.swing.JDialog();
+        jLabel31 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -89,11 +135,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
         Title = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         assignAgentToMissionButton = new javax.swing.JButton();
-        findAvailableAgentsForMissionButton = new javax.swing.JButton();
         findAgentsOnMissionButton = new javax.swing.JButton();
         findMissionWithAgentButton = new javax.swing.JButton();
         findAvailableAgentsButton = new javax.swing.JButton();
         withdrawAgentFromMissionButton = new javax.swing.JButton();
+        findAvailableAgentsForMissionButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         connectDBMenuItem = new javax.swing.JMenuItem();
@@ -106,13 +152,13 @@ public class SwingGUI01 extends javax.swing.JFrame {
         addAgentDialog.setAlwaysOnTop(true);
         addAgentDialog.setBackground(new java.awt.Color(0, 204, 204));
         addAgentDialog.setLocationByPlatform(true);
-        addAgentDialog.setMinimumSize(new java.awt.Dimension(320, 320));
+        addAgentDialog.setMinimumSize(new java.awt.Dimension(320, 350));
         addAgentDialog.setName("addDialog"); // NOI18N
-        addAgentDialog.setPreferredSize(new java.awt.Dimension(320, 320));
+        addAgentDialog.setPreferredSize(new java.awt.Dimension(320, 350));
 
-        jLabel2.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel2.setBackground(new java.awt.Color(0, 100, 200));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 153, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 150, 0));
         jLabel2.setText("  Add agent");
         jLabel2.setOpaque(true);
 
@@ -232,7 +278,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout addAgentDialogLayout = new javax.swing.GroupLayout(addAgentDialog.getContentPane());
@@ -240,26 +286,27 @@ public class SwingGUI01 extends javax.swing.JFrame {
         addAgentDialogLayout.setHorizontalGroup(
             addAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 320, Short.MAX_VALUE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 320, Short.MAX_VALUE)
         );
         addAgentDialogLayout.setVerticalGroup(
             addAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addAgentDialogLayout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE))
         );
 
-        editDialog.setTitle("Edit agent");
-        editDialog.setAlwaysOnTop(true);
-        editDialog.setBackground(new java.awt.Color(0, 204, 204));
-        editDialog.setLocationByPlatform(true);
-        editDialog.setMinimumSize(new java.awt.Dimension(320, 340));
-        editDialog.setName("EditDialog"); // NOI18N
+        editAgentDialog.setTitle("Edit agent");
+        editAgentDialog.setAlwaysOnTop(true);
+        editAgentDialog.setBackground(new java.awt.Color(0, 100, 200));
+        editAgentDialog.setLocationByPlatform(true);
+        editAgentDialog.setMinimumSize(new java.awt.Dimension(320, 370));
+        editAgentDialog.setName("EditDialog"); // NOI18N
+        editAgentDialog.setPreferredSize(new java.awt.Dimension(320, 372));
 
-        jLabel6.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel6.setBackground(new java.awt.Color(0, 100, 200));
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 153, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 150, 0));
         jLabel6.setText("  Edit agent");
         jLabel6.setMaximumSize(new java.awt.Dimension(154, 29));
         jLabel6.setMinimumSize(new java.awt.Dimension(154, 29));
@@ -330,9 +377,8 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -355,50 +401,54 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dateChooserCombo3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(13, 13, 13)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dateChooserCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(0, 35, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(25, 25, 25))
         );
 
-        javax.swing.GroupLayout editDialogLayout = new javax.swing.GroupLayout(editDialog.getContentPane());
-        editDialog.getContentPane().setLayout(editDialogLayout);
-        editDialogLayout.setHorizontalGroup(
-            editDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout editAgentDialogLayout = new javax.swing.GroupLayout(editAgentDialog.getContentPane());
+        editAgentDialog.getContentPane().setLayout(editAgentDialogLayout);
+        editAgentDialogLayout.setHorizontalGroup(
+            editAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        editDialogLayout.setVerticalGroup(
-            editDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(editDialogLayout.createSequentialGroup()
+        editAgentDialogLayout.setVerticalGroup(
+            editAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editAgentDialogLayout.createSequentialGroup()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        deleteDialog.setTitle("Delete agent");
-        deleteDialog.setAlwaysOnTop(true);
-        deleteDialog.setLocationByPlatform(true);
-        deleteDialog.setMinimumSize(new java.awt.Dimension(400, 200));
-        deleteDialog.setName("deleteDialog"); // NOI18N
-        deleteDialog.setPreferredSize(new java.awt.Dimension(400, 200));
+        deleteAgentDialog.setTitle("Delete agent");
+        deleteAgentDialog.setAlwaysOnTop(true);
+        deleteAgentDialog.setLocationByPlatform(true);
+        deleteAgentDialog.setMinimumSize(new java.awt.Dimension(400, 210));
+        deleteAgentDialog.setName("deleteAgentDialog"); // NOI18N
+        deleteAgentDialog.setPreferredSize(new java.awt.Dimension(363, 191));
 
-        jLabel11.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel11.setBackground(new java.awt.Color(0, 100, 200));
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 153, 0));
+        jLabel11.setForeground(new java.awt.Color(255, 150, 0));
         jLabel11.setText("  Delete agent");
         jLabel11.setOpaque(true);
 
@@ -450,33 +500,33 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout deleteDialogLayout = new javax.swing.GroupLayout(deleteDialog.getContentPane());
-        deleteDialog.getContentPane().setLayout(deleteDialogLayout);
-        deleteDialogLayout.setHorizontalGroup(
-            deleteDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout deleteAgentDialogLayout = new javax.swing.GroupLayout(deleteAgentDialog.getContentPane());
+        deleteAgentDialog.getContentPane().setLayout(deleteAgentDialogLayout);
+        deleteAgentDialogLayout.setHorizontalGroup(
+            deleteAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        deleteDialogLayout.setVerticalGroup(
-            deleteDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(deleteDialogLayout.createSequentialGroup()
+        deleteAgentDialogLayout.setVerticalGroup(
+            deleteAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(deleteAgentDialogLayout.createSequentialGroup()
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        findDialog.setTitle("Find agent");
-        findDialog.setAlwaysOnTop(true);
-        findDialog.setLocationByPlatform(true);
-        findDialog.setMinimumSize(new java.awt.Dimension(400, 200));
-        findDialog.setPreferredSize(new java.awt.Dimension(400, 200));
+        findAgentDialog.setTitle("Find agent");
+        findAgentDialog.setAlwaysOnTop(true);
+        findAgentDialog.setLocationByPlatform(true);
+        findAgentDialog.setMinimumSize(new java.awt.Dimension(400, 225));
+        findAgentDialog.setPreferredSize(new java.awt.Dimension(400, 225));
 
-        jLabel14.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel14.setBackground(new java.awt.Color(0, 100, 200));
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(153, 153, 0));
+        jLabel14.setForeground(new java.awt.Color(255, 150, 0));
         jLabel14.setText("  Find agent");
         jLabel14.setOpaque(true);
 
@@ -527,24 +577,516 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout findDialogLayout = new javax.swing.GroupLayout(findDialog.getContentPane());
-        findDialog.getContentPane().setLayout(findDialogLayout);
-        findDialogLayout.setHorizontalGroup(
-            findDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout findAgentDialogLayout = new javax.swing.GroupLayout(findAgentDialog.getContentPane());
+        findAgentDialog.getContentPane().setLayout(findAgentDialogLayout);
+        findAgentDialogLayout.setHorizontalGroup(
+            findAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        findDialogLayout.setVerticalGroup(
-            findDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(findDialogLayout.createSequentialGroup()
+        findAgentDialogLayout.setVerticalGroup(
+            findAgentDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(findAgentDialogLayout.createSequentialGroup()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        addMissionDialog.setAlwaysOnTop(true);
+        addMissionDialog.setMinimumSize(new java.awt.Dimension(370, 385));
+        addMissionDialog.setPreferredSize(new java.awt.Dimension(370, 385));
+
+        jPanel8.setPreferredSize(new java.awt.Dimension(461, 300));
+
+        jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel16.setText("Begin date");
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel17.setText("End date");
+
+        dateChooserCombo4.setCalendarPreferredSize(new java.awt.Dimension(375, 270));
+        try {
+            dateChooserCombo4.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
+        dateChooserCombo4.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.BOLD, 18));
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel18.setText("Difficulty");
+
+        jTextField6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField6ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel19.setText("Note");
+
+        jScrollPane5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jScrollPane5.setMinimumSize(new java.awt.Dimension(0, 0));
+        jScrollPane5.setPreferredSize(new java.awt.Dimension(205, 73));
+
+        jTextArea3.setColumns(18);
+        jTextArea3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextArea3.setLineWrap(true);
+        jTextArea3.setRows(5);
+        jScrollPane5.setViewportView(jTextArea3);
+
+        add.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        add.setText("Add agent");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+
+        jButton10.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jButton10.setText("Cancel");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel21.setText("Capacity");
+
+        jTextField7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+
+        dateChooserCombo5.setCalendarPreferredSize(new java.awt.Dimension(375, 270));
+        try {
+            dateChooserCombo5.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
+        dateChooserCombo5.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.BOLD, 18));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(17, 17, 17))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(dateChooserCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dateChooserCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(214, 214, 214))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel16)
+                    .addComponent(dateChooserCombo5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dateChooserCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        jLabel20.setBackground(new java.awt.Color(0, 100, 200));
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 150, 0));
+        jLabel20.setText("  Add mission");
+        jLabel20.setOpaque(true);
+
+        javax.swing.GroupLayout addMissionDialogLayout = new javax.swing.GroupLayout(addMissionDialog.getContentPane());
+        addMissionDialog.getContentPane().setLayout(addMissionDialogLayout);
+        addMissionDialogLayout.setHorizontalGroup(
+            addMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+        );
+        addMissionDialogLayout.setVerticalGroup(
+            addMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(addMissionDialogLayout.createSequentialGroup()
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        editMissionDialog.setAlwaysOnTop(true);
+        editMissionDialog.setMinimumSize(new java.awt.Dimension(370, 390));
+        editMissionDialog.setPreferredSize(new java.awt.Dimension(370, 390));
+
+        jLabel22.setBackground(new java.awt.Color(0, 100, 200));
+        jLabel22.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 150, 0));
+        jLabel22.setText("  Edit mission");
+        jLabel22.setOpaque(true);
+
+        jPanel9.setPreferredSize(new java.awt.Dimension(461, 300));
+
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel23.setText("Begin date");
+
+        jLabel24.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel24.setText("End date");
+
+        dateChooserCombo6.setCalendarPreferredSize(new java.awt.Dimension(375, 270));
+        try {
+            dateChooserCombo6.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
+        dateChooserCombo6.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.BOLD, 18));
+
+        jLabel25.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel25.setText("Difficulty");
+
+        jTextField8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+
+        jLabel26.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel26.setText("Note");
+
+        jScrollPane6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jScrollPane6.setMinimumSize(new java.awt.Dimension(0, 0));
+        jScrollPane6.setPreferredSize(new java.awt.Dimension(205, 73));
+
+        jTextArea4.setColumns(18);
+        jTextArea4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextArea4.setLineWrap(true);
+        jTextArea4.setRows(5);
+        jScrollPane6.setViewportView(jTextArea4);
+
+        add1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        add1.setText("Edit agent");
+        add1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add1ActionPerformed(evt);
+            }
+        });
+
+        jButton11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        jButton11.setText("Cancel");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+
+        jLabel27.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel27.setText("Capacity");
+
+        jTextField9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+
+        dateChooserCombo7.setCalendarPreferredSize(new java.awt.Dimension(375, 270));
+        try {
+            dateChooserCombo7.setDefaultPeriods(new datechooser.model.multiple.PeriodSet());
+        } catch (datechooser.model.exeptions.IncompatibleDataExeption e1) {
+            e1.printStackTrace();
+        }
+        dateChooserCombo7.setFieldFont(new java.awt.Font("Dialog", java.awt.Font.BOLD, 18));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(add1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(17, 17, 17))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(dateChooserCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(dateChooserCombo7, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(56, 56, 56))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel23)
+                    .addComponent(dateChooserCombo7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dateChooserCombo6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(add1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout editMissionDialogLayout = new javax.swing.GroupLayout(editMissionDialog.getContentPane());
+        editMissionDialog.getContentPane().setLayout(editMissionDialogLayout);
+        editMissionDialogLayout.setHorizontalGroup(
+            editMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+        );
+        editMissionDialogLayout.setVerticalGroup(
+            editMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(editMissionDialogLayout.createSequentialGroup()
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        deleteMissionDialog.setAlwaysOnTop(true);
+        deleteMissionDialog.setMinimumSize(new java.awt.Dimension(400, 200));
+        deleteMissionDialog.setPreferredSize(new java.awt.Dimension(400, 200));
+
+        jLabel28.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("Do you realy want to delete mission id=? ?");
+
+        jLabel29.setText("When you delete mission, you lose all the the information");
+
+        jButton9.setText("Delete");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton12.setText("Cancel");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)
+                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel29)))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel29)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jLabel30.setBackground(new java.awt.Color(0, 100, 200));
+        jLabel30.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 150, 0));
+        jLabel30.setText("  Delete mission");
+        jLabel30.setOpaque(true);
+
+        javax.swing.GroupLayout deleteMissionDialogLayout = new javax.swing.GroupLayout(deleteMissionDialog.getContentPane());
+        deleteMissionDialog.getContentPane().setLayout(deleteMissionDialogLayout);
+        deleteMissionDialogLayout.setHorizontalGroup(
+            deleteMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        deleteMissionDialogLayout.setVerticalGroup(
+            deleteMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(deleteMissionDialogLayout.createSequentialGroup()
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        findMissionDialog.setAlwaysOnTop(true);
+        findMissionDialog.setMinimumSize(new java.awt.Dimension(400, 225));
+        findMissionDialog.setPreferredSize(new java.awt.Dimension(400, 225));
+
+        jLabel31.setBackground(new java.awt.Color(0, 100, 200));
+        jLabel31.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 150, 0));
+        jLabel31.setText("  Find mission");
+        jLabel31.setOpaque(true);
+
+        jLabel32.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel32.setText("Select mission id:");
+
+        jComboBox2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton13.setText("Find mission");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Cancel");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout findMissionDialogLayout = new javax.swing.GroupLayout(findMissionDialog.getContentPane());
+        findMissionDialog.getContentPane().setLayout(findMissionDialogLayout);
+        findMissionDialogLayout.setHorizontalGroup(
+            findMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        findMissionDialogLayout.setVerticalGroup(
+            findMissionDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(findMissionDialogLayout.createSequentialGroup()
+                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agency");
         setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(100, 100, 100));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusTraversalPolicyProvider(true);
         setLocationByPlatform(true);
@@ -552,11 +1094,13 @@ public class SwingGUI01 extends javax.swing.JFrame {
         setName("Main"); // NOI18N
         setResizable(false);
 
-        jLayeredPane1.setBackground(new java.awt.Color(0, 204, 204));
+        jLayeredPane1.setBackground(new java.awt.Color(150, 150, 150));
         jLayeredPane1.setOpaque(true);
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(800, 528));
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jTabbedPane2.setBackground(new java.awt.Color(100, 100, 100));
+
+        jPanel1.setBackground(new java.awt.Color(100, 100, 100));
         jPanel1.setPreferredSize(new java.awt.Dimension(932, 530));
 
         agentsTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -630,7 +1174,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(addAgentButton)
@@ -641,11 +1184,12 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(findAgentButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 973, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addAgentButton)
@@ -657,7 +1201,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Agents table", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel2.setBackground(new java.awt.Color(100, 100, 100));
 
         missionsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -697,12 +1241,27 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         addMissionButton.setText("add mission");
         addMissionButton.setName("addMissionButton"); // NOI18N
+        addMissionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addMissionButtonActionPerformed(evt);
+            }
+        });
 
         editMissionButton.setText("edit mission");
         editMissionButton.setName("editMissionButton"); // NOI18N
+        editMissionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editMissionButtonActionPerformed(evt);
+            }
+        });
 
         deleteMissionButton.setText("delete mission");
         deleteMissionButton.setName("deleteMissionButton"); // NOI18N
+        deleteMissionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteMissionButtonActionPerformed(evt);
+            }
+        });
 
         findMissionButton.setText("find mission");
         findMissionButton.setName("findMissionButton"); // NOI18N
@@ -726,12 +1285,12 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(deleteMissionButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(findMissionButton)
-                .addContainerGap(400, Short.MAX_VALUE))
+                .addContainerGap(573, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(findMissionButton)
@@ -747,72 +1306,80 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
         );
         jLayeredPane1.setLayer(jTabbedPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        Title.setBackground(new java.awt.Color(0, 204, 204));
+        Title.setBackground(new java.awt.Color(0, 100, 200));
         Title.setFont(new java.awt.Font("Utopia", 1, 48)); // NOI18N
-        Title.setForeground(new java.awt.Color(153, 153, 0));
+        Title.setForeground(new java.awt.Color(255, 150, 0));
         Title.setText(" Agency");
         Title.setToolTipText("");
         Title.setOpaque(true);
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 153));
+        jPanel3.setBackground(new java.awt.Color(0, 100, 200));
 
+        assignAgentToMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         assignAgentToMissionButton.setText("assign agent to mission");
 
-        findAvailableAgentsForMissionButton.setText("find available agents for mission");
-
+        findAgentsOnMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         findAgentsOnMissionButton.setText("find agents on mission");
 
+        findMissionWithAgentButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         findMissionWithAgentButton.setText("find mission with agent");
         findMissionWithAgentButton.setToolTipText("");
 
+        findAvailableAgentsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         findAvailableAgentsButton.setText("find available agents");
 
+        withdrawAgentFromMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         withdrawAgentFromMissionButton.setText("withdraw agent from mission");
+
+        findAvailableAgentsForMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        findAvailableAgentsForMissionButton.setText("find available agents for mission");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(assignAgentToMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(withdrawAgentFromMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(findMissionWithAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(findAgentsOnMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(assignAgentToMissionButton)
-                        .addGap(82, 82, 82)
-                        .addComponent(findAgentsOnMissionButton)
-                        .addGap(78, 78, 78)
-                        .addComponent(findAvailableAgentsButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(findAvailableAgentsForMissionButton)
-                        .addGap(72, 72, 72)
-                        .addComponent(findMissionWithAgentButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(withdrawAgentFromMissionButton)))
-                .addGap(40, 40, 40))
+                        .addComponent(findAvailableAgentsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(findAvailableAgentsForMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(assignAgentToMissionButton)
-                    .addComponent(findAgentsOnMissionButton)
-                    .addComponent(findAvailableAgentsButton))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(findAvailableAgentsForMissionButton)
-                    .addComponent(findMissionWithAgentButton)
-                    .addComponent(withdrawAgentFromMissionButton))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(assignAgentToMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(findAgentsOnMissionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(findAvailableAgentsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(withdrawAgentFromMissionButton, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(findMissionWithAgentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(findAvailableAgentsForMissionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -853,29 +1420,31 @@ public class SwingGUI01 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
             .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 978, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(6, 6, 6))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void findMissionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findMissionButtonActionPerformed
-        // TODO add your handling code here:
+        findMissionDialog.setVisible(true);
+        findMissionDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_findMissionButtonActionPerformed
 
     private void addAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAgentButtonActionPerformed
@@ -900,8 +1469,8 @@ public class SwingGUI01 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void editAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAgentButtonActionPerformed
-        editDialog.setVisible(true);
-        editDialog.getContentPane().setBackground(Color.GRAY);
+        editAgentDialog.setVisible(true);
+        editAgentDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_editAgentButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -913,8 +1482,8 @@ public class SwingGUI01 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void deleteAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAgentButtonActionPerformed
-        deleteDialog.setVisible(true);
-        deleteDialog.getContentPane().setBackground(Color.GRAY);
+        deleteAgentDialog.setVisible(true);
+        deleteAgentDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_deleteAgentButtonActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -922,25 +1491,89 @@ public class SwingGUI01 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        deleteDialog.setVisible(false);
+        deleteAgentDialog.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void findAgentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findAgentButtonActionPerformed
-        findDialog.setVisible(true);
-        findDialog.getContentPane().setBackground(Color.GRAY);
+        findAgentDialog.setVisible(true);
+        findAgentDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_findAgentButtonActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        findDialog.setVisible(false);
+        findAgentDialog.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        editDialog.setVisible(false);
+        editAgentDialog.setVisible(false);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         addAgentDialog.setVisible(false);
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        addMissionDialog.setVisible(false);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void add1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_add1ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        editMissionDialog.setVisible(false);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        deleteMissionDialog.setVisible(false);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        findMissionDialog.setVisible(false);
+        findMissionDialog.getContentPane().setBackground(Color.GRAY);
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void addMissionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addMissionButtonActionPerformed
+        addMissionDialog.setVisible(true);
+        addMissionDialog.getContentPane().setBackground(Color.GRAY);
+    }//GEN-LAST:event_addMissionButtonActionPerformed
+
+    private void editMissionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editMissionButtonActionPerformed
+        editMissionDialog.setVisible(true);
+        editMissionDialog.getContentPane().setBackground(Color.GRAY);
+    }//GEN-LAST:event_editMissionButtonActionPerformed
+
+    private void deleteMissionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMissionButtonActionPerformed
+        deleteMissionDialog.setVisible(true);
+        deleteMissionDialog.getContentPane().setBackground(Color.GRAY);
+    }//GEN-LAST:event_deleteMissionButtonActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -982,30 +1615,45 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Title;
+    private javax.swing.JButton add;
+    private javax.swing.JButton add1;
     private javax.swing.JButton addAgentButton;
     private javax.swing.JDialog addAgentDialog;
     private javax.swing.JButton addMissionButton;
+    private javax.swing.JDialog addMissionDialog;
     private javax.swing.JTable agentsTable;
     private javax.swing.JButton assignAgentToMissionButton;
     private javax.swing.JMenuItem connectDBMenuItem;
     private datechooser.beans.DateChooserCombo dateChooserCombo2;
     private datechooser.beans.DateChooserCombo dateChooserCombo3;
+    private datechooser.beans.DateChooserCombo dateChooserCombo4;
+    private datechooser.beans.DateChooserCombo dateChooserCombo5;
+    private datechooser.beans.DateChooserCombo dateChooserCombo6;
+    private datechooser.beans.DateChooserCombo dateChooserCombo7;
     private javax.swing.JButton deleteAgentButton;
-    private javax.swing.JDialog deleteDialog;
+    private javax.swing.JDialog deleteAgentDialog;
     private javax.swing.JButton deleteMissionButton;
+    private javax.swing.JDialog deleteMissionDialog;
     private javax.swing.JMenuItem disconnectDBMenuItem;
     private javax.swing.JButton editAgentButton;
-    private javax.swing.JDialog editDialog;
+    private javax.swing.JDialog editAgentDialog;
     private javax.swing.JButton editMissionButton;
+    private javax.swing.JDialog editMissionDialog;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JButton findAgentButton;
+    private javax.swing.JDialog findAgentDialog;
     private javax.swing.JButton findAgentsOnMissionButton;
     private javax.swing.JButton findAvailableAgentsButton;
     private javax.swing.JButton findAvailableAgentsForMissionButton;
-    private javax.swing.JDialog findDialog;
     private javax.swing.JButton findMissionButton;
+    private javax.swing.JDialog findMissionDialog;
     private javax.swing.JButton findMissionWithAgentButton;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1013,7 +1661,9 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1021,8 +1671,25 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1034,23 +1701,35 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTable missionsTable;
     private javax.swing.JMenuItem reloadDBMenuItem;
     private javax.swing.JButton withdrawAgentFromMissionButton;

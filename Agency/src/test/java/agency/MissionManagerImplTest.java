@@ -520,6 +520,7 @@ public class MissionManagerImplTest {
     private Mission newMission() {
         Mission mission = new Mission();
         
+        mission.setName("The Avengers");
         mission.setBeginDate(new GregorianCalendar(2001, 7, 15).getTime());
         mission.setEndDate(new GregorianCalendar(2001, 7, 16).getTime());
         mission.setCapacity(5);

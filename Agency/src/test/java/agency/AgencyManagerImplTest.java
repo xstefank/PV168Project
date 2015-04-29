@@ -503,9 +503,10 @@ public class AgencyManagerImplTest {
         assertEquals("Agent has a different note", agent.getNote(), result.getNote());
     }
 
-    private static Mission newMission(Date missionBegin, Date missionEnd, int difficulty, int capacity, String note) {
+    private static Mission newMission(String name, Date missionBegin, Date missionEnd, int difficulty, int capacity, String note) {
         Mission mission = new Mission();
 
+        mission.setName(name);
         mission.setBeginDate(missionBegin);
         mission.setEndDate(missionEnd);
         mission.setDifficulty(difficulty);
@@ -519,14 +520,14 @@ public class AgencyManagerImplTest {
         Calendar missionBegin = new GregorianCalendar(2015, Calendar.JANUARY, 1);
         Calendar missionEnd = new GregorianCalendar(2015, Calendar.MARCH, 11);
 
-        return newMission(missionBegin.getTime(), missionEnd.getTime(), 3, 3, "code name - PV168");
+        return newMission("The Avengers",missionBegin.getTime(), missionEnd.getTime(), 3, 3, "code name - PV168");
     }
 
     private static Mission newMission02() {
         Calendar missionBegin = new GregorianCalendar(2014, Calendar.DECEMBER, 6);
         Calendar missionEnd = new GregorianCalendar(2015, Calendar.FEBRUARY, 9);
 
-        return newMission(missionBegin.getTime(), missionEnd.getTime(), 2, 2, "code name - Dark World");
+        return newMission("Age of Ultron", missionBegin.getTime(), missionEnd.getTime(), 2, 2, "code name - Dark World");
     }
 
     private void assertDeepEquals(Mission agent, Mission result) {
