@@ -34,6 +34,12 @@ public class AgentManagerImpl implements AgentManager {
     
     private static final Logger log = Logger.getLogger(AgentManagerImpl.class);
 
+    public AgentManagerImpl() {}
+    
+    public AgentManagerImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+    
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }
