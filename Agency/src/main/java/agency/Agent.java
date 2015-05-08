@@ -63,7 +63,7 @@ public class Agent {
     
     @Override
     public String toString() {
-        return "Agent{" + "id=" + id + '}' + name;
+        return "Agent{" + name + '}';
     }
 
     @Override

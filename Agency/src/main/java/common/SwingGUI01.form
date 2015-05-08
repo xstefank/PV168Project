@@ -19,8 +19,8 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jLabel2" pref="320" max="32767" attributes="0"/>
-              <Component id="jPanel4" alignment="0" pref="320" max="32767" attributes="0"/>
+              <Component id="jLabel2" max="32767" attributes="0"/>
+              <Component id="jPanel4" alignment="0" pref="329" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -28,7 +28,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel2" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel4" pref="296" max="32767" attributes="0"/>
+                  <Component id="jPanel4" pref="301" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -60,47 +60,46 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace min="25" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                      <Component id="agentDialogAddAgentButton" min="-2" pref="107" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jButton8" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel4" max="32767" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jComboBox5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel5" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              <Component id="agentDialogAddAgentButton" min="-2" pref="107" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="jButton8" min="-2" pref="95" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                      <Component id="addAgentDialogName" min="-2" pref="205" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="addAgentDialogBorn" min="-2" pref="205" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel5" max="32767" attributes="0"/>
+                                          <Component id="jLabel4" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="addAgentDialogLevel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="213" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="addAgentDialogBorn" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="addAgentDialogName" alignment="0" pref="192" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="25" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -113,16 +112,21 @@
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="addAgentDialogBorn" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel3" min="-2" pref="26" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="addAgentDialogBorn" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addAgentDialogLevel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
@@ -132,7 +136,7 @@
                           <Component id="agentDialogAddAgentButton" max="32767" attributes="0"/>
                           <Component id="jButton8" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="48" max="32767" attributes="0"/>
+                      <EmptySpace pref="53" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -162,20 +166,6 @@
                   <Font name="Dialog" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Born"/>
-              </Properties>
-            </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="addAgentDialogBorn">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_combo_dateFormat" type="int" value="2"/>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,1,115,114,0,33,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,29,77,-123,76,95,4,43,-93,2,0,2,76,0,7,101,110,100,68,97,116,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,67,97,108,101,110,100,97,114,59,76,0,9,115,116,97,114,116,68,97,116,101,113,0,126,0,7,120,112,115,114,0,27,106,97,118,97,46,117,116,105,108,46,71,114,101,103,111,114,105,97,110,67,97,108,101,110,100,97,114,-113,61,-41,-42,-27,-80,-48,-63,2,0,1,74,0,16,103,114,101,103,111,114,105,97,110,67,117,116,111,118,101,114,120,114,0,18,106,97,118,97,46,117,116,105,108,46,67,97,108,101,110,100,97,114,-26,-22,77,30,-56,-36,91,-114,3,0,11,90,0,12,97,114,101,70,105,101,108,100,115,83,101,116,73,0,14,102,105,114,115,116,68,97,121,79,102,87,101,101,107,90,0,9,105,115,84,105,109,101,83,101,116,90,0,7,108,101,110,105,101,110,116,73,0,22,109,105,110,105,109,97,108,68,97,121,115,73,110,70,105,114,115,116,87,101,101,107,73,0,9,110,101,120,116,83,116,97,109,112,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,74,0,4,116,105,109,101,91,0,6,102,105,101,108,100,115,116,0,2,91,73,91,0,5,105,115,83,101,116,116,0,2,91,90,76,0,4,122,111,110,101,116,0,20,76,106,97,118,97,47,117,116,105,108,47,84,105,109,101,90,111,110,101,59,120,112,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,0,73,122,-81,-3,112,117,114,0,2,91,73,77,-70,96,38,118,-22,-78,-91,2,0,0,120,112,0,0,0,17,0,0,0,1,0,0,7,-68,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,1,0,0,0,5,0,0,0,17,0,0,0,9,0,0,0,26,0,0,2,-128,0,54,-18,-128,0,0,0,0,117,114,0,2,91,90,87,-113,32,57,20,-72,93,-30,2,0,0,120,112,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,114,0,24,106,97,118,97,46,117,116,105,108,46,83,105,109,112,108,101,84,105,109,101,90,111,110,101,-6,103,93,96,-47,94,-11,-90,3,0,18,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,6,101,110,100,68,97,121,73,0,12,101,110,100,68,97,121,79,102,87,101,101,107,73,0,7,101,110,100,77,111,100,101,73,0,8,101,110,100,77,111,110,116,104,73,0,7,101,110,100,84,105,109,101,73,0,11,101,110,100,84,105,109,101,77,111,100,101,73,0,9,114,97,119,79,102,102,115,101,116,73,0,21,115,101,114,105,97,108,86,101,114,115,105,111,110,79,110,83,116,114,101,97,109,73,0,8,115,116,97,114,116,68,97,121,73,0,14,115,116,97,114,116,68,97,121,79,102,87,101,101,107,73,0,9,115,116,97,114,116,77,111,100,101,73,0,10,115,116,97,114,116,77,111,110,116,104,73,0,9,115,116,97,114,116,84,105,109,101,73,0,13,115,116,97,114,116,84,105,109,101,77,111,100,101,73,0,9,115,116,97,114,116,89,101,97,114,90,0,11,117,115,101,68,97,121,108,105,103,104,116,91,0,11,109,111,110,116,104,76,101,110,103,116,104,116,0,2,91,66,120,114,0,18,106,97,118,97,46,117,116,105,108,46,84,105,109,101,90,111,110,101,49,-77,-23,-11,119,68,-84,-95,2,0,1,76,0,2,73,68,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,116,0,13,69,117,114,111,112,101,47,80,114,97,103,117,101,0,54,-18,-128,-1,-1,-1,-1,0,0,0,1,0,0,0,2,0,0,0,9,0,-92,-53,-128,0,0,0,2,0,54,-18,-128,0,0,0,2,-1,-1,-1,-1,0,0,0,1,0,0,0,2,0,0,0,2,0,109,-35,0,0,0,0,2,0,0,0,0,1,117,114,0,2,91,66,-84,-13,23,-8,6,8,84,-32,2,0,0,120,112,0,0,0,12,31,28,31,30,31,30,31,31,30,31,30,31,119,10,0,0,0,6,-1,1,-1,1,2,2,117,113,0,126,0,15,0,0,0,2,0,54,-18,-128,0,54,-18,-128,120,115,114,0,26,115,117,110,46,117,116,105,108,46,99,97,108,101,110,100,97,114,46,90,111,110,101,73,110,102,111,36,-47,-45,-50,0,29,113,-101,2,0,8,73,0,8,99,104,101,99,107,115,117,109,73,0,10,100,115,116,83,97,118,105,110,103,115,73,0,9,114,97,119,79,102,102,115,101,116,73,0,13,114,97,119,79,102,102,115,101,116,68,105,102,102,90,0,19,119,105,108,108,71,77,84,79,102,102,115,101,116,67,104,97,110,103,101,91,0,7,111,102,102,115,101,116,115,113,0,126,0,11,91,0,20,115,105,109,112,108,101,84,105,109,101,90,111,110,101,80,97,114,97,109,115,113,0,126,0,11,91,0,11,116,114,97,110,115,105,116,105,111,110,115,116,0,2,91,74,120,113,0,126,0,21,113,0,126,0,24,127,62,-101,-117,0,54,-18,-128,0,54,-18,-128,0,0,0,0,0,117,113,0,126,0,15,0,0,0,3,0,54,-18,-128,0,109,-35,0,0,54,-18,-128,117,113,0,126,0,15,0,0,0,10,0,0,0,2,-1,-1,-1,-1,0,0,0,1,0,54,-18,-128,0,0,0,2,0,0,0,9,-1,-1,-1,-1,0,0,0,1,0,54,-18,-128,0,0,0,2,117,114,0,2,91,74,120,32,4,-75,18,-79,117,-109,2,0,0,120,112,0,0,0,-115,-1,-33,-38,-32,29,-64,0,0,-1,-25,90,115,-76,-16,0,33,-1,-25,-117,-75,-13,-104,0,0,-1,-25,-53,37,30,40,0,33,-1,-25,-4,-74,83,-88,0,0,-1,-24,64,77,-53,40,0,33,-1,-24,113,-33,0,-88,0,0,-1,-14,86,78,57,-88,0,33,-1,-13,-122,119,-45,104,0,0,-1,-13,-75,-56,64,-88,0,33,-1,-13,-14,-99,95,104,0,0,-1,-12,45,49,-75,-24,0,33,-1,-12,98,-14,22,40,0,0,-1,-12,-92,72,-59,104,0,33,-1,-12,-20,97,-51,104,0,0,-1,-11,34,-58,-7,40,0,33,-1,-11,84,5,-56,-24,0,0,-1,-11,-109,27,-81,-24,0,33,-1,-11,-55,46,117,-24,0,0,-1,-10,8,68,92,-24,0,33,-1,-10,62,87,34,-24,0,0,-1,-10,122,-39,-37,-24,0,33,-1,-10,-77,127,-49,-24,0,0,0,4,62,-13,-88,-88,0,33,0,4,121,-121,-1,40,0,0,0,4,-74,93,29,-24,0,33,0,4,-18,-80,-84,40,0,0,0,5,41,69,2,-88,0,33,0,5,99,-39,89,40,0,0,0,5,-98,109,-81,-88,0,33,0,5,-39,2,6,40,0,0,0,6,19,-106,92,-88,0,33,0,6,78,42,-77,40,0,0,0,6,-120,-65,9,-88,0,33,0,6,-59,-108,40,104,0,0,0,7,0,40,126,-24,0,33,0,7,58,-68,-43,104,0,0,0,7,117,81,43,-24,0,33,0,7,-81,-27,-126,104,0,0,0,7,-22,121,-40,-24,0,33,0,8,37,14,47,104,0,0,0,8,95,-94,-123,-24,0,33,0,8,-102,54,-36,104,0,0,0,8,-44,-53,50,-24,0,33,0,9,15,95,-119,104,0,0,0,9,73,-13,-33,-24,0,33,0,9,-122,-56,-2,-88,0,0,0,9,-63,93,85,40,0,33,0,9,-5,-15,-85,-88,0,0,0,10,54,-122,2,40,0,33,0,10,113,26,88,-88,0,0,0,10,-85,-82,-81,40,0,33,0,10,-26,67,5,-88,0,0,0,11,32,-41,92,40,0,33,0,11,91,107,-78,-88,0,0,0,11,-106,0,9,40,0,33,0,11,-48,-108,95,-88,0,0,0,12,13,105,126,104,0,33,0,12,81,0,-11,-24,0,0,0,12,-126,-110,43,104,0,33,0,12,-58,41,-94,-24,0,0,0,12,-9,-70,-40,104,0,33,0,13,59,82,79,-24,0,0,0,13,108,-29,-123,104,0,33,0,13,-78,-69,-59,40,0,0,0,13,-30,12,50,104,0,33,0,14,39,-28,114,40,0,0,0,14,87,52,-33,104,0,33,0,14,-99,13,31,40,0,0,0,14,-50,-98,84,-88,0,33,0,15,18,53,-52,40,0,0,0,15,67,-57,1,-88,0,33,0,15,-121,94,121,40,0,0,0,15,-72,-17,-82,-88,0,33,0,15,-2,-57,-18,104,0,0,0,16,46,24,91,-88,0,33,0,16,115,-16,-101,104,0,0,0,16,-93,65,8,-88,0,33,0,16,-23,25,72,104,0,0,0,17,24,105,-75,-88,0,33,0,17,94,65,-11,104,0,0,0,17,-113,-45,42,-24,0,33,0,17,-45,106,-94,104,0,0,0,18,4,-5,-41,-24,0,33,0,18,72,-109,79,104,0,0,0,18,122,36,-124,-24,0,33,0,18,-65,-4,-60,-88,0,0,0,18,-17,77,49,-24,0,33,0,19,53,37,113,-88,0,0,0,19,100,117,-34,-24,0,33,0,19,-86,78,30,-88,0,0,0,19,-37,-33,84,40,0,33,0,20,31,118,-53,-88,0,0,0,20,81,8,1,40,0,33,0,20,-108,-97,120,-88,0,0,0,20,-58,48,-82,40,0,33,0,21,9,-56,37,-88,0,0,0,21,59,89,91,40,0,33,0,21,-127,49,-102,-24,0,0,0,21,-80,-126,8,40,0,33,0,21,-10,90,71,-24,0,0,0,22,37,-86,-75,40,0,33,0,22,107,-126,-12,-24,0,0,0,22,-99,20,42,104,0,33,0,22,-32,-85,-95,-24,0,0,0,23,18,60,-41,104,0,33,0,23,85,-44,78,-24,0,0,0,23,-121,101,-124,104,0,33,0,23,-51,61,-60,40,0,0,0,23,-4,-114,49,104,0,33,0,24,66,102,113,40,0,0,0,24,113,-74,-34,104,0,33,0,24,-73,-113,30,40,0,0,0,24,-23,32,83,-88,0,33,0,25,44,-73,-53,40,0,0,0,25,94,73,0,-88,0,33,0,25,-95,-32,120,40,0,0,0,25,-45,113,-83,-88,0,33,0,26,23,9,37,40,0,0,0,26,72,-102,90,-88,0,33,0,26,-114,114,-102,104,0,0,0,26,-67,-61,7,-88,0,33,0,27,3,-101,71,104,0,0,0,27,50,-21,-76,-88,0,33,0,27,120,-61,-12,104,0,0,0,27,-86,85,41,-24,0,33,0,27,-19,-20,-95,104,0,0,0,28,31,125,-42,-24,0,33,0,28,99,21,78,104,0,0,0,28,-108,-90,-125,-24,0,33,0,28,-38,126,-61,-88,0,0,0,29,9,-49,48,-24,0,33,0,29,79,-89,112,-88,0,0,0,29,126,-9,-35,-24,0,33,0,29,-60,-48,29,-88,0,0,0,29,-12,32,-118,-24,0,33,0,30,57,-8,-54,-88,0,0,0,30,107,-118,0,40,0,33,0,30,-81,33,119,-88,0,0,0,30,-32,-78,-83,40,0,33,0,31,36,74,36,-88,0,0,120,-1,-1,-12,-30,-7,100,-84,0,115,113,0,126,0,9,1,0,0,0,1,1,1,0,0,0,1,0,0,0,2,0,0,0,1,0,0,0,73,122,-81,-3,112,117,113,0,126,0,15,0,0,0,17,0,0,0,1,0,0,7,-68,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,3,0,0,0,1,0,0,0,1,0,0,0,5,0,0,0,17,0,0,0,9,0,0,0,26,0,0,2,-128,0,54,-18,-128,0,0,0,0,117,113,0,126,0,17,0,0,0,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,115,113,0,126,0,19,113,0,126,0,24,0,54,-18,-128,-1,-1,-1,-1,0,0,0,1,0,0,0,2,0,0,0,9,0,-92,-53,-128,0,0,0,2,0,54,-18,-128,0,0,0,2,-1,-1,-1,-1,0,0,0,1,0,0,0,2,0,0,0,2,0,109,-35,0,0,0,0,2,0,0,0,0,1,113,0,126,0,26,119,10,0,0,0,6,-1,1,-1,1,2,2,117,113,0,126,0,15,0,0,0,2,0,54,-18,-128,0,54,-18,-128,120,115,113,0,126,0,28,113,0,126,0,24,127,62,-101,-117,0,54,-18,-128,0,54,-18,-128,0,0,0,0,0,113,0,126,0,31,113,0,126,0,32,113,0,126,0,34,120,-1,-1,-12,-30,-7,100,-84,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -212,7 +202,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="addAgentDialogNote">
                   <Properties>
                     <Property name="columns" type="int" value="18"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -246,15 +236,31 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox5">
+            <Component class="javax.swing.JComboBox" name="addAgentDialogLevel">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
+                  <StringArray count="10">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
                   </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="addAgentDialogBorn">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="strings.properties" key="dateFormat" replaceFormat="java.util.ResourceBundle.getBundle(&quot;strings&quot;).getString(&quot;dateFormat&quot;)"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
                 </Property>
               </Properties>
             </Component>
@@ -280,7 +286,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jLabel6" max="32767" attributes="0"/>
-              <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+              <Component id="jPanel5" alignment="0" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -288,7 +294,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel6" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -300,7 +306,7 @@
               <Color blue="c8" green="64" red="0" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Dialog" size="18" style="1"/>
+              <Font name="Dialog" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="96" red="ff" type="rgb"/>
@@ -332,17 +338,17 @@
                           <Component id="jLabel10" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
-                          <Component id="dateChooserCombo3" alignment="0" pref="204" max="32767" attributes="0"/>
-                          <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="editAgentDialogName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jScrollPane4" alignment="1" pref="204" max="32767" attributes="0"/>
+                          <Component id="editAgentDialogLevel" min="-2" max="-2" attributes="0"/>
+                          <Component id="editAgentDialogBorn" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="107" max="-2" attributes="0"/>
+                      <Component id="editAgentDialogEditAgentButton" min="-2" pref="107" max="-2" attributes="0"/>
                       <EmptySpace pref="47" max="32767" attributes="0"/>
                       <Component id="jButton7" min="-2" pref="94" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -355,17 +361,17 @@
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="editAgentDialogName" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="dateChooserCombo3" min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jLabel8" max="32767" attributes="0"/>
+                          <Component id="jLabel8" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="editAgentDialogBorn" pref="33" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel9" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="editAgentDialogLevel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -380,7 +386,7 @@
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton2" pref="34" max="32767" attributes="0"/>
+                          <Component id="editAgentDialogEditAgentButton" pref="34" max="32767" attributes="0"/>
                           <Component id="jButton7" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -421,7 +427,7 @@
                 <Property name="text" type="java.lang.String" value="Note"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="editAgentDialogName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="18" style="1"/>
@@ -431,20 +437,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo3">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="editAgentDialogEditAgentButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="12" style="1"/>
@@ -452,17 +445,7 @@
                 <Property name="text" type="java.lang.String" value="Edit agent"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Dialog" size="18" style="1"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editAgentDialogEditAgentButtonActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -483,7 +466,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                <Component class="javax.swing.JTextArea" name="editAgentDialogNote">
                   <Properties>
                     <Property name="columns" type="int" value="18"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -506,6 +489,34 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JComboBox" name="editAgentDialogLevel">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="10">
+                    <StringItem index="0" value="1"/>
+                    <StringItem index="1" value="2"/>
+                    <StringItem index="2" value="3"/>
+                    <StringItem index="3" value="4"/>
+                    <StringItem index="4" value="5"/>
+                    <StringItem index="5" value="6"/>
+                    <StringItem index="6" value="7"/>
+                    <StringItem index="7" value="8"/>
+                    <StringItem index="8" value="9"/>
+                    <StringItem index="9" value="10"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="editAgentDialogBorn">
+              <Properties>
+                <Property name="dateFormatString" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="strings.properties" key="dateFormat" replaceFormat="java.util.ResourceBundle.getBundle(&quot;strings&quot;).getString(&quot;dateFormat&quot;)"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
@@ -516,8 +527,9 @@
         <Property name="alwaysOnTop" type="boolean" value="true"/>
         <Property name="locationByPlatform" type="boolean" value="true"/>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[400, 210]"/>
+          <Dimension value="[444, 210]"/>
         </Property>
+        <Property name="modal" type="boolean" value="true"/>
         <Property name="name" type="java.lang.String" value="deleteAgentDialog" noResource="true"/>
       </Properties>
 
@@ -559,34 +571,34 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel12" alignment="1" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jButton3" min="-2" pref="82" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" pref="85" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace pref="96" max="32767" attributes="0"/>
+                      <Component id="deleteAgentDialogDeleteButton" min="-2" pref="82" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                      <Component id="jButton4" min="-2" pref="85" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel12" min="-2" pref="287" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="deleteAgentDialogName" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="jLabel13" alignment="1" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="deleteAgentDialogName" min="-2" pref="17" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton3" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="deleteAgentDialogDeleteButton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="jButton4" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="33" max="32767" attributes="0"/>
@@ -600,21 +612,22 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
                 </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Do you realy want to delete agent name=? ?"/>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+                <Property name="text" type="java.lang.String" value="Do you realy want to delete agent"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel13">
               <Properties>
-                <Property name="text" type="java.lang.String" value="When you delete agent, you lose all the the information"/>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="When you delete agent, you lose all of the information"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="deleteAgentDialogDeleteButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteAgentDialogDeleteButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton4">
@@ -624,6 +637,13 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="deleteAgentDialogName">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="14" style="1"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -683,11 +703,11 @@
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Component id="jLabel15" min="-2" pref="120" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" min="-2" pref="173" max="-2" attributes="0"/>
+                              <Component id="findAgentDialogComboBox" min="-2" pref="173" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                              <Component id="jButton5" min="-2" pref="99" max="-2" attributes="0"/>
+                              <Component id="findAgentDialogFindAgentbutton" min="-2" pref="99" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="jButton6" min="-2" pref="97" max="-2" attributes="0"/>
                           </Group>
@@ -702,11 +722,11 @@
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel15" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="findAgentDialogComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton5" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="findAgentDialogFindAgentbutton" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="jButton6" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="60" max="32767" attributes="0"/>
@@ -723,25 +743,23 @@
                 <Property name="text" type="java.lang.String" value="Select agent:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="findAgentDialogComboBox">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="findAgentDialogFindAgentbutton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Find agent"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="findAgentDialogFindAgentbuttonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton6">
               <Properties>
@@ -796,94 +814,86 @@
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Component id="jTextField10" min="-2" pref="205" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                          <Component id="add" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jButton10" min="-2" pref="95" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel18" max="32767" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel19" max="32767" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="jTextField7" min="-2" pref="205" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="add" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="dateChooserCombo4" min="-2" pref="205" max="-2" attributes="0"/>
+                                      <Component id="jButton10" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel19" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="422" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="dateChooserCombo5" min="-2" pref="205" max="-2" attributes="0"/>
+                                      <Component id="jLabel18" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="422" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                                      <Component id="jTextField10" min="-2" pref="205" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jScrollPane5" max="32767" attributes="0"/>
+                                          <Component id="jTextField7" max="32767" attributes="0"/>
+                                          <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jDateChooser1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jDateChooser2" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="205" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTextField10" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                          <Component id="dateChooserCombo5" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jDateChooser1" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel17" alignment="0" max="32767" attributes="0"/>
-                          <Component id="dateChooserCombo4" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="jLabel17" pref="26" max="32767" attributes="0"/>
+                          <Component id="jDateChooser2" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel18" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jComboBox3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jComboBox3" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jLabel18" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel21" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField7" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel21" min="-2" pref="24" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel19" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="jScrollPane5" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -893,7 +903,7 @@
                           <Component id="add" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButton10" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="63" max="32767" attributes="0"/>
+                      <EmptySpace pref="54" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -913,19 +923,6 @@
                   <Font name="Dialog" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="End date"/>
-              </Properties>
-            </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo4">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel18">
@@ -1014,19 +1011,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo5">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel33">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1059,6 +1043,10 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox3ActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
             </Component>
           </SubComponents>
         </Container>
@@ -1147,9 +1135,9 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel25" max="32767" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel26" max="32767" attributes="0"/>
@@ -1163,22 +1151,24 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="dateChooserCombo6" min="-2" pref="205" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="dateChooserCombo7" min="-2" pref="205" max="-2" attributes="0"/>
-                                      <Component id="jTextField11" min="-2" pref="205" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jTextField11" pref="205" max="32767" attributes="0"/>
+                                  <Component id="jDateChooser3" max="32767" attributes="0"/>
+                                  <Component id="jDateChooser4" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1189,28 +1179,25 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel23" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="dateChooserCombo7" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
+                          <Component id="jDateChooser3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel24" alignment="0" max="32767" attributes="0"/>
-                          <Component id="dateChooserCombo6" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel24" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="jDateChooser4" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jComboBox4" min="-2" pref="25" max="-2" attributes="0"/>
-                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="jLabel25" min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel25" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jComboBox4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1247,19 +1234,6 @@
                   <Font name="Dialog" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="End date"/>
-              </Properties>
-            </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo6">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel25">
@@ -1349,19 +1323,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="datechooser.beans.DateChooserCombo" name="dateChooserCombo7">
-              <Properties>
-                <Property name="dch_calSize" type="java.awt.Dimension" editor="datechooser.beans.editor.dimension.SimpleDimensionEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,14,0,0,1,119"/>
-                </Property>
-                <Property name="dch_defaultDates" type="datechooser.model.multiple.PeriodSet" editor="datechooser.beans.editor.dates.PeriodsEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,36,100,97,116,101,99,104,111,111,115,101,114,46,109,111,100,101,108,46,109,117,108,116,105,112,108,101,46,80,101,114,105,111,100,83,101,116,-104,-44,-96,42,-91,51,-90,42,2,0,3,76,0,4,100,97,116,97,116,0,22,76,106,97,118,97,47,117,116,105,108,47,76,105,110,107,101,100,76,105,115,116,59,76,0,9,108,97,115,116,65,100,100,101,100,116,0,35,76,100,97,116,101,99,104,111,111,115,101,114,47,109,111,100,101,108,47,109,117,108,116,105,112,108,101,47,80,101,114,105,111,100,59,76,0,10,112,101,114,105,111,100,67,97,115,104,113,0,126,0,2,120,112,115,114,0,20,106,97,118,97,46,117,116,105,108,46,76,105,110,107,101,100,76,105,115,116,12,41,83,93,74,96,-120,34,3,0,0,120,112,119,4,0,0,0,0,120,112,112"/>
-                </Property>
-                <Property name="dch_combo_fieldFont" type="java.awt.Font" editor="datechooser.beans.editor.font.SimpleFontEditor">
-                  <SerializedValue value="-84,-19,0,5,115,114,0,13,106,97,118,97,46,97,119,116,46,70,111,110,116,-59,-95,53,-26,-52,-34,86,115,3,0,6,73,0,25,102,111,110,116,83,101,114,105,97,108,105,122,101,100,68,97,116,97,86,101,114,115,105,111,110,70,0,9,112,111,105,110,116,83,105,122,101,73,0,4,115,105,122,101,73,0,5,115,116,121,108,101,76,0,20,102,82,101,113,117,101,115,116,101,100,65,116,116,114,105,98,117,116,101,115,116,0,21,76,106,97,118,97,47,117,116,105,108,47,72,97,115,104,116,97,98,108,101,59,76,0,4,110,97,109,101,116,0,18,76,106,97,118,97,47,108,97,110,103,47,83,116,114,105,110,103,59,120,112,0,0,0,1,65,-112,0,0,0,0,0,18,0,0,0,1,112,116,0,6,68,105,97,108,111,103,120"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel34">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1391,6 +1352,10 @@
                   </StringArray>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser4">
             </Component>
           </SubComponents>
         </Container>

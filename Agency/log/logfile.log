@@ -1,45 +1,22 @@
-08-05-2015 16:10:43 DEBUG [main] - agency.Agency.main 44 - LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOG
-08-05-2015 16:10:43  INFO [main] - agency.SpringConfig.dataSource 37 - dataSource called
-08-05-2015 16:10:43  INFO [main] - org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory.initDatabase 147 - Creating embedded database 'testdb'
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection 110 - Fetching JDBC Connection from DataSource
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver 138 - Creating new JDBC Driver Connection to [jdbc:derby:memory:testdb;create=true]
-08-05-2015 16:10:44  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 432 - Executing SQL script from class path resource [agencyDB.sql]
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 0 returned as updateCount for SQL: CREATE TABLE APP.Missions ( id BIGINT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY, "name" VARCHAR(255) NOT NULL, beginDate DATE NOT NULL, endDate DATE NOT NULL, difficulty INTEGER CONSTRAINT difficultyConstraint check (difficulty >= 1 and difficulty <= 10), capacity INTEGER CONSTRAINT capacityConstraint check (capacity >= 1), note VARCHAR(255) )
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 0 returned as updateCount for SQL: CREATE TABLE APP.Agents ( id BIGINT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY, "name" VARCHAR(255) NOT NULL, born DATE NOT NULL, level INTEGER CONSTRAINT levelConstraint check (level >= 1 and level <= 10), note VARCHAR(255), missionId BIGINT REFERENCES APP.Missions (ID) ON DELETE SET NULL )
-08-05-2015 16:10:44  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 491 - Executed SQL script from class path resource [agencyDB.sql] in 133 ms.
-08-05-2015 16:10:44  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 432 - Executing SQL script from class path resource [test-data.sql]
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 1 returned as updateCount for SQL: INSERT INTO App.Agents ("name",born,level,note) VALUES ('James Bond','1980-01-01',5,'best agent ever')
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 1 returned as updateCount for SQL: INSERT INTO App.Agents ("name",born,level,note) VALUES ('Black Widow','1983-01-01',3,'one of the avenger')
-08-05-2015 16:10:44  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 491 - Executed SQL script from class path resource [test-data.sql] in 45 ms.
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection 327 - Returning JDBC Connection to DataSource
-08-05-2015 16:10:44 DEBUG [main] - agency.AgentManagerImpl.findAllAgents 225 - findAllAgents called
-08-05-2015 16:10:44 DEBUG [main] - org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver 138 - Creating new JDBC Driver Connection to [jdbc:derby:memory:testdb;create=true]
-08-05-2015 19:28:22 DEBUG [main] - agency.Agency.main 44 - LOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOG
-08-05-2015 19:28:22  INFO [main] - agency.SpringConfig.dataSource 37 - dataSource called
-08-05-2015 19:28:22  INFO [main] - org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory.initDatabase 147 - Creating embedded database 'testdb'
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection 110 - Fetching JDBC Connection from DataSource
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver 138 - Creating new JDBC Driver Connection to [jdbc:derby:memory:testdb;create=true]
-08-05-2015 19:28:22  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 432 - Executing SQL script from class path resource [agencyDB.sql]
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 0 returned as updateCount for SQL: CREATE TABLE APP.Missions ( id BIGINT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY, "name" VARCHAR(255) NOT NULL, beginDate DATE NOT NULL, endDate DATE NOT NULL, difficulty INTEGER CONSTRAINT difficultyConstraint check (difficulty >= 1 and difficulty <= 10), capacity INTEGER CONSTRAINT capacityConstraint check (capacity >= 1), note VARCHAR(255) )
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 0 returned as updateCount for SQL: CREATE TABLE APP.Agents ( id BIGINT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY, "name" VARCHAR(255) NOT NULL, born DATE NOT NULL, level INTEGER CONSTRAINT levelConstraint check (level >= 1 and level <= 10), note VARCHAR(255), missionId BIGINT REFERENCES APP.Missions (ID) ON DELETE SET NULL )
-08-05-2015 19:28:22  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 491 - Executed SQL script from class path resource [agencyDB.sql] in 126 ms.
-08-05-2015 19:28:22  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 432 - Executing SQL script from class path resource [test-data.sql]
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 1 returned as updateCount for SQL: INSERT INTO App.Agents ("name",born,level,note) VALUES ('James Bond','1980-01-01',5,'best agent ever')
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 463 - 1 returned as updateCount for SQL: INSERT INTO App.Agents ("name",born,level,note) VALUES ('Black Widow','1983-01-01',3,'one of the avenger')
-08-05-2015 19:28:22  INFO [main] - org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript 491 - Executed SQL script from class path resource [test-data.sql] in 57 ms.
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection 327 - Returning JDBC Connection to DataSource
-08-05-2015 19:28:22 DEBUG [main] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:28:22 DEBUG [main] - org.springframework.jdbc.datasource.SimpleDriverDataSource.getConnectionFromDriver 138 - Creating new JDBC Driver Connection to [jdbc:derby:memory:testdb;create=true]
-08-05-2015 19:33:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:34:14 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:36:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:36:04 ERROR [AWT-EventQueue-0] - common.SwingGUI01.addAgentDialogAddAgentButtonActionPerformed 2056 - Add agent exception
-java.lang.IllegalArgumentException: agent cannot have a null date of birth
-	at agency.AgentManagerImpl.validateAgentsAttributes(AgentManagerImpl.java:263)
+09-05-2015 00:02:38 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:04:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:05:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:05:55 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:07:28 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:07:57 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:08:22 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:09:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:09:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:10:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:12:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:12:25 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:12:25 ERROR [AWT-EventQueue-0] - common.SwingGUI01.agentDialogAddAgentButtonActionPerformed 2209 - Add agent exception
+java.lang.IllegalArgumentException: agent cannot have an empty name
+	at agency.AgentManagerImpl.validateAgentsAttributes(AgentManagerImpl.java:259)
 	at agency.AgentManagerImpl.createAgent(AgentManagerImpl.java:60)
-	at common.SwingGUI01.addAgentDialogAddAgentButtonActionPerformed(SwingGUI01.java:2054)
-	at common.SwingGUI01.access$000(SwingGUI01.java:33)
-	at common.SwingGUI01$1.actionPerformed(SwingGUI01.java:341)
+	at common.SwingGUI01.agentDialogAddAgentButtonActionPerformed(SwingGUI01.java:2207)
+	at common.SwingGUI01.access$000(SwingGUI01.java:31)
+	at common.SwingGUI01$1.actionPerformed(SwingGUI01.java:289)
 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
@@ -76,70 +53,24 @@ java.lang.IllegalArgumentException: agent cannot have a null date of birth
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-08-05-2015 19:36:43 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:36:48 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:09 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:16 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:38 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:43 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:37:50 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:40:22 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:40:48 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:42:34 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:43:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:43:25 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:43:25 ERROR [AWT-EventQueue-0] - common.SwingGUI01.addAgentDialogAddAgentButtonActionPerformed 2056 - Add agent exception
-java.lang.IllegalArgumentException: agent cannot have a null date of birth
-	at agency.AgentManagerImpl.validateAgentsAttributes(AgentManagerImpl.java:263)
-	at agency.AgentManagerImpl.createAgent(AgentManagerImpl.java:60)
-	at common.SwingGUI01.addAgentDialogAddAgentButtonActionPerformed(SwingGUI01.java:2054)
-	at common.SwingGUI01.access$000(SwingGUI01.java:33)
-	at common.SwingGUI01$1.actionPerformed(SwingGUI01.java:341)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6525)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6290)
-	at java.awt.Container.processEvent(Container.java:2234)
-	at java.awt.Component.dispatchEventImpl(Component.java:4881)
-	at java.awt.Container.dispatchEventImpl(Container.java:2292)
-	at java.awt.Component.dispatchEvent(Component.java:4703)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
-	at java.awt.Container.dispatchEventImpl(Container.java:2278)
-	at java.awt.Window.dispatchEventImpl(Window.java:2750)
-	at java.awt.Component.dispatchEvent(Component.java:4703)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.awt.EventQueue$4.run(EventQueue.java:729)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-08-05-2015 19:43:37 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:43:54 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:44:16 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:44:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:45:03 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:46:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
-08-05-2015 19:46:15 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:51:23 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:52:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
-08-05-2015 19:52:44 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:13:42 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:14:23 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:16:09 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:27:56 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:27:58 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:28:39 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:28:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:29:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:29:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:32:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:32:03 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:36 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:49 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:40:17 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:41:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:42:16 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:42:26 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called

@@ -88,10 +88,9 @@
             <version>SNAPSHOT</version>
         </dependency-->
         <dependency>
-            <groupId>JDateChooser</groupId>
-            <artifactId>JDateChooser</artifactId>
-            <version>1.0</version>
-            <type>jar</type>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
         </dependency>
     </dependencies>
     <properties>

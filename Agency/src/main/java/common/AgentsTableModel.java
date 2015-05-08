@@ -9,6 +9,7 @@ import agency.Agent;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -83,6 +84,8 @@ public class AgentsTableModel extends AbstractTableModel {
                 throw new IllegalArgumentException("illegal columnIndex");
         }
     }
+    
+    
 
     public void addAgent(Agent agent) {
         agents.add(agent);
@@ -90,7 +93,17 @@ public class AgentsTableModel extends AbstractTableModel {
         fireTableRowsInserted(lastRow, lastRow);
     }
     
+    public void removeAgent(Agent agent) {
+        agents.remove(agent);
+        int lastRow = agents.size() - 1;
+        fireTableRowsDeleted(lastRow, lastRow);
+    }
+    
     public Agent getSelectedAgent(int rowIndex) {
         return agents.get(rowIndex);
+    }
+    
+    public List<Agent> getAllRows() {
+        return Collections.unmodifiableList(agents);
     }
 }
