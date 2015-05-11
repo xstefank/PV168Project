@@ -17,6 +17,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Properties;
+import java.util.ResourceBundle;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -62,12 +63,23 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         initComponents();
         getContentPane().setBackground(Color.GRAY);
+        
+        //title renaming
+        setTitle(ResourceBundle.getBundle("strings").getString("agency"));
+        
+        //tabs renaming
+        jTabbedPane2.setTitleAt(0, ResourceBundle.getBundle("strings").getString("agentsTable"));
+        jTabbedPane2.setTitleAt(1, ResourceBundle.getBundle("strings").getString("missionTable"));
 
+        //agents table inicialization
         AgentsTableModel model = (AgentsTableModel) agentsTable.getModel();
         agentsTable.getColumnModel().getColumn(0).setPreferredWidth(200);
         agentsTable.getColumnModel().getColumn(1).setPreferredWidth(100);
         agentsTable.getColumnModel().getColumn(2).setPreferredWidth(43);
         agentsTable.getColumnModel().getColumn(3).setPreferredWidth(625);
+        
+        //disable column reorganization
+        agentsTable.getTableHeader().setReorderingAllowed(true);
 
         for (Agent agent : agentManager.findAllAgents()) {
             model.addAgent(agent);
@@ -113,11 +125,10 @@ public class SwingGUI01 extends javax.swing.JFrame {
         deleteAgentDialog = new javax.swing.JDialog();
         jLabel11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
+        deleteAgentDialogSureCheck = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         deleteAgentDialogDeleteButton = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        deleteAgentDialogName = new javax.swing.JLabel();
         findAgentDialog = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -179,11 +190,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
-        jComboBox11 = new javax.swing.JComboBox();
+        assignDialogMissionsComboBox = new javax.swing.JComboBox();
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jLabel48 = new javax.swing.JLabel();
-        jComboBox12 = new javax.swing.JComboBox();
+        assignDialogAgentsComboBox = new javax.swing.JComboBox();
         withdrawDialog = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
@@ -240,13 +251,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
         findAvailableAgentsForMissionButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        connectDBMenuItem = new javax.swing.JMenuItem();
-        disconnectDBMenuItem = new javax.swing.JMenuItem();
-        reloadDBMenuItem = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
-        addAgentDialog.setTitle("Add agent");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("strings"); // NOI18N
+        addAgentDialog.setTitle(bundle.getString("addAgent")); // NOI18N
         addAgentDialog.setAlwaysOnTop(true);
         addAgentDialog.setBackground(new java.awt.Color(0, 204, 204));
         addAgentDialog.setLocationByPlatform(true);
@@ -256,7 +265,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(0, 100, 200));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel2.setText("  Add agent");
+        jLabel2.setText(bundle.getString("addAgent")); // NOI18N
         jLabel2.setOpaque(true);
 
         jPanel4.setPreferredSize(new java.awt.Dimension(461, 300));
@@ -265,16 +274,16 @@ public class SwingGUI01 extends javax.swing.JFrame {
         addAgentDialogName.setMinimumSize(new java.awt.Dimension(192, 30));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("Name");
+        jLabel1.setText(bundle.getString("nameColumn")); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setText("Born");
+        jLabel3.setText(bundle.getString("bornColumn")); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel4.setText("Level");
+        jLabel4.setText(bundle.getString("levelColumn")); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel5.setText("Note");
+        jLabel5.setText(bundle.getString("noteColumn")); // NOI18N
 
         jScrollPane1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jScrollPane1.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -287,7 +296,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(addAgentDialogNote);
 
         agentDialogAddAgentButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        agentDialogAddAgentButton.setText("Add agent");
+        agentDialogAddAgentButton.setText(bundle.getString("addAgent")); // NOI18N
         agentDialogAddAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agentDialogAddAgentButtonActionPerformed(evt);
@@ -295,7 +304,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jButton8.setText("Cancel");
+        jButton8.setText(bundle.getString("cancel")); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -304,7 +313,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         addAgentDialogLevel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
-        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("strings"); // NOI18N
         addAgentDialogBorn.setDateFormatString(bundle.getString("dateFormat")); // NOI18N
         addAgentDialogBorn.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
 
@@ -387,7 +395,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE))
         );
 
-        editAgentDialog.setTitle("Edit agent");
+        editAgentDialog.setTitle(bundle.getString("editAgent")); // NOI18N
         editAgentDialog.setAlwaysOnTop(true);
         editAgentDialog.setBackground(new java.awt.Color(0, 100, 200));
         editAgentDialog.setLocationByPlatform(true);
@@ -397,29 +405,29 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(0, 100, 200));
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel6.setText("  Edit agent");
+        jLabel6.setText(bundle.getString("editAgent")); // NOI18N
         jLabel6.setMaximumSize(new java.awt.Dimension(154, 29));
         jLabel6.setMinimumSize(new java.awt.Dimension(154, 29));
         jLabel6.setOpaque(true);
         jLabel6.setPreferredSize(new java.awt.Dimension(154, 29));
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel7.setText("Name");
+        jLabel7.setText(bundle.getString("nameColumn")); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel8.setText("Born");
+        jLabel8.setText(bundle.getString("bornColumn")); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel9.setText("Level");
+        jLabel9.setText(bundle.getString("levelColumn")); // NOI18N
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel10.setText("Note");
+        jLabel10.setText(bundle.getString("noteColumn")); // NOI18N
 
         editAgentDialogName.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         editAgentDialogName.setMinimumSize(new java.awt.Dimension(192, 30));
 
         editAgentDialogEditAgentButton.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        editAgentDialogEditAgentButton.setText("Edit agent");
+        editAgentDialogEditAgentButton.setText(bundle.getString("editAgent")); // NOI18N
         editAgentDialogEditAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editAgentDialogEditAgentButtonActionPerformed(evt);
@@ -437,7 +445,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jScrollPane4.setViewportView(editAgentDialogNote);
 
         jButton7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jButton7.setText("Cancel");
+        jButton7.setText(bundle.getString("cancel")); // NOI18N
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -489,15 +497,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editAgentDialogLevel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(0, 35, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(editAgentDialogEditAgentButton, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -519,7 +523,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        deleteAgentDialog.setTitle("Delete agent");
+        deleteAgentDialog.setTitle(bundle.getString("deleteAgent")); // NOI18N
         deleteAgentDialog.setAlwaysOnTop(true);
         deleteAgentDialog.setLocationByPlatform(true);
         deleteAgentDialog.setMinimumSize(new java.awt.Dimension(444, 210));
@@ -529,31 +533,30 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel11.setBackground(new java.awt.Color(0, 100, 200));
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel11.setText("  Delete agent");
+        jLabel11.setText(bundle.getString("deleteAgent")); // NOI18N
         jLabel11.setOpaque(true);
 
-        jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel12.setText("Do you realy want to delete agent");
+        deleteAgentDialogSureCheck.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        deleteAgentDialogSureCheck.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        deleteAgentDialogSureCheck.setText(bundle.getString("deleteAgentSureCheck")); // NOI18N
+        deleteAgentDialogSureCheck.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("When you delete agent, you lose all of the information");
+        jLabel13.setText(bundle.getString("deleteAgentSureInfo")); // NOI18N
 
-        deleteAgentDialogDeleteButton.setText("Delete");
+        deleteAgentDialogDeleteButton.setText(bundle.getString("delete")); // NOI18N
         deleteAgentDialogDeleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteAgentDialogDeleteButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Cancel");
+        jButton4.setText(bundle.getString("cancel")); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-
-        deleteAgentDialogName.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -565,19 +568,14 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGap(88, 88, 88)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(93, 93, 93))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deleteAgentDialogName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(deleteAgentDialogSureCheck, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel12)
-                    .addComponent(deleteAgentDialogName, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(deleteAgentDialogSureCheck)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel13)
                 .addGap(18, 18, 18)
@@ -602,7 +600,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        findAgentDialog.setTitle("Find agent");
+        findAgentDialog.setTitle(bundle.getString("findAgent")); // NOI18N
         findAgentDialog.setAlwaysOnTop(true);
         findAgentDialog.setLocationByPlatform(true);
         findAgentDialog.setMinimumSize(new java.awt.Dimension(400, 225));
@@ -610,22 +608,27 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel14.setBackground(new java.awt.Color(0, 100, 200));
         jLabel14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel14.setText("  Find agent");
+        jLabel14.setText(bundle.getString("findAgent")); // NOI18N
         jLabel14.setOpaque(true);
 
         jLabel15.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel15.setText("Select agent:");
+        jLabel15.setText(bundle.getString("selectAgent")); // NOI18N
 
         findAgentDialogComboBox.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        findAgentDialogComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findAgentDialogComboBoxActionPerformed(evt);
+            }
+        });
 
-        findAgentDialogFindAgentbutton.setText("Find agent");
+        findAgentDialogFindAgentbutton.setText(bundle.getString("findAgent")); // NOI18N
         findAgentDialogFindAgentbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 findAgentDialogFindAgentbuttonActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Cancel");
+        jButton6.setText(bundle.getString("cancel")); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -679,6 +682,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        addMissionDialog.setTitle(bundle.getString("addMission")); // NOI18N
         addMissionDialog.setAlwaysOnTop(true);
         addMissionDialog.setLocationByPlatform(true);
         addMissionDialog.setMinimumSize(new java.awt.Dimension(375, 415));
@@ -686,16 +690,16 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jPanel8.setPreferredSize(new java.awt.Dimension(461, 300));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel16.setText("Begin date");
+        jLabel16.setText(bundle.getString("beginDateColumn")); // NOI18N
 
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel17.setText("End date");
+        jLabel17.setText(bundle.getString("endDateColumn")); // NOI18N
 
         jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel18.setText("Difficulty");
+        jLabel18.setText(bundle.getString("difficultyColumn")); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel19.setText("Note");
+        jLabel19.setText(bundle.getString("noteColumn")); // NOI18N
 
         jScrollPane5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jScrollPane5.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -708,7 +712,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jScrollPane5.setViewportView(jTextArea3);
 
         add.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        add.setText("Add mission");
+        add.setText(bundle.getString("addMission")); // NOI18N
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addActionPerformed(evt);
@@ -716,7 +720,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jButton10.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jButton10.setText("Cancel");
+        jButton10.setText(bundle.getString("cancel")); // NOI18N
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -724,7 +728,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel21.setText("Capacity");
+        jLabel21.setText(bundle.getString("capacityColumn")); // NOI18N
 
         jTextField7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
@@ -734,7 +738,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel33.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel33.setText("Name");
+        jLabel33.setText(bundle.getString("nameColumn")); // NOI18N
 
         jTextField10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
@@ -831,7 +835,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel20.setBackground(new java.awt.Color(0, 100, 200));
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel20.setText("  Add mission");
+        jLabel20.setText(bundle.getString("addMission")); // NOI18N
         jLabel20.setOpaque(true);
 
         javax.swing.GroupLayout addMissionDialogLayout = new javax.swing.GroupLayout(addMissionDialog.getContentPane());
@@ -849,6 +853,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE))
         );
 
+        editMissionDialog.setTitle(bundle.getString("editMission")); // NOI18N
         editMissionDialog.setAlwaysOnTop(true);
         editMissionDialog.setLocationByPlatform(true);
         editMissionDialog.setMinimumSize(new java.awt.Dimension(375, 415));
@@ -856,22 +861,22 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel22.setBackground(new java.awt.Color(0, 100, 200));
         jLabel22.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel22.setText("  Edit mission");
+        jLabel22.setText(bundle.getString("editMission")); // NOI18N
         jLabel22.setOpaque(true);
 
         jPanel9.setPreferredSize(new java.awt.Dimension(461, 300));
 
         jLabel23.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel23.setText("Begin date");
+        jLabel23.setText(bundle.getString("beginDateColumn")); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel24.setText("End date");
+        jLabel24.setText(bundle.getString("endDateColumn")); // NOI18N
 
         jLabel25.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel25.setText("Difficulty");
+        jLabel25.setText(bundle.getString("difficultyColumn")); // NOI18N
 
         jLabel26.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel26.setText("Note");
+        jLabel26.setText(bundle.getString("noteColumn")); // NOI18N
 
         jScrollPane6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jScrollPane6.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -884,7 +889,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jScrollPane6.setViewportView(jTextArea4);
 
         add1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        add1.setText("Edit mission");
+        add1.setText(bundle.getString("editMission")); // NOI18N
         add1.setToolTipText("");
         add1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -893,7 +898,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jButton11.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jButton11.setText("Cancel");
+        jButton11.setText(bundle.getString("cancel")); // NOI18N
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -901,7 +906,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel27.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel27.setText("Capacity");
+        jLabel27.setText(bundle.getString("capacityColumn")); // NOI18N
 
         jTextField9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -911,7 +916,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel34.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel34.setText("Name");
+        jLabel34.setText(bundle.getString("nameColumn")); // NOI18N
 
         jTextField11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jTextField11.addActionListener(new java.awt.event.ActionListener() {
@@ -970,7 +975,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel34))
@@ -1017,24 +1022,27 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        deleteMissionDialog.setTitle(bundle.getString("deleteMission")); // NOI18N
         deleteMissionDialog.setAlwaysOnTop(true);
         deleteMissionDialog.setLocationByPlatform(true);
         deleteMissionDialog.setMinimumSize(new java.awt.Dimension(400, 200));
 
         jLabel28.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("Do you realy want to delete mission name=? ?");
+        jLabel28.setText(bundle.getString("deleteMissionSureCheck")); // NOI18N
 
-        jLabel29.setText("When you delete mission, you lose all the the information");
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText(bundle.getString("deleteMissionSureInfo")); // NOI18N
+        jLabel29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton9.setText("Delete");
+        jButton9.setText(bundle.getString("delete")); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
 
-        jButton12.setText("Cancel");
+        jButton12.setText(bundle.getString("cancel")); // NOI18N
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -1047,16 +1055,12 @@ public class SwingGUI01 extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel29)))
+                .addGap(79, 79, 79)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(89, Short.MAX_VALUE))
+            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1075,7 +1079,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel30.setBackground(new java.awt.Color(0, 100, 200));
         jLabel30.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel30.setText("  Delete mission");
+        jLabel30.setText(bundle.getString("deleteMission")); // NOI18N
         jLabel30.setOpaque(true);
 
         javax.swing.GroupLayout deleteMissionDialogLayout = new javax.swing.GroupLayout(deleteMissionDialog.getContentPane());
@@ -1093,6 +1097,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        findMissionDialog.setTitle(bundle.getString("findMission")); // NOI18N
         findMissionDialog.setAlwaysOnTop(true);
         findMissionDialog.setLocationByPlatform(true);
         findMissionDialog.setMinimumSize(new java.awt.Dimension(400, 225));
@@ -1100,23 +1105,23 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel31.setBackground(new java.awt.Color(0, 100, 200));
         jLabel31.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel31.setText("  Find mission");
+        jLabel31.setText(bundle.getString("findMission")); // NOI18N
         jLabel31.setOpaque(true);
 
         jLabel32.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel32.setText("Select mission:");
+        jLabel32.setText(bundle.getString("selectMission")); // NOI18N
 
         jComboBox2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton13.setText("Find mission");
+        jButton13.setText(bundle.getString("findMission")); // NOI18N
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
 
-        jButton14.setText("Cancel");
+        jButton14.setText(bundle.getString("cancel")); // NOI18N
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -1170,29 +1175,29 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        assignDialog.setTitle(bundle.getString("assignAgentToMission")); // NOI18N
         assignDialog.setLocationByPlatform(true);
         assignDialog.setMinimumSize(new java.awt.Dimension(400, 240));
 
         jLabel46.setBackground(new java.awt.Color(0, 100, 200));
         jLabel46.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel46.setText("  Assign agent to mission");
+        jLabel46.setText(bundle.getString("assignAgentToMission")); // NOI18N
         jLabel46.setOpaque(true);
 
         jLabel47.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel47.setText("Select mission:");
+        jLabel47.setText(bundle.getString("selectMission")); // NOI18N
 
-        jComboBox11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        assignDialogMissionsComboBox.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
-        jButton25.setText("Assign");
+        jButton25.setText(bundle.getString("assign")); // NOI18N
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
             }
         });
 
-        jButton26.setText("Cancel");
+        jButton26.setText(bundle.getString("cancel")); // NOI18N
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
@@ -1200,10 +1205,9 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel48.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel48.setText("Select agent:");
+        jLabel48.setText(bundle.getString("selectAgent")); // NOI18N
 
-        jComboBox12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        assignDialogAgentsComboBox.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1222,11 +1226,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                                .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(assignDialogAgentsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(assignDialogMissionsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(29, 29, 29))
         );
         jPanel17Layout.setVerticalGroup(
@@ -1235,11 +1239,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(assignDialogAgentsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(assignDialogMissionsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1262,23 +1266,24 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        withdrawDialog.setTitle(bundle.getString("withdrawAgentFromMission")); // NOI18N
         withdrawDialog.setLocationByPlatform(true);
         withdrawDialog.setMinimumSize(new java.awt.Dimension(400, 240));
 
         jLabel37.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel37.setText("Select mission:");
+        jLabel37.setText(bundle.getString("selectMission")); // NOI18N
 
         jComboBox6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton17.setText("Withdraw");
+        jButton17.setText(bundle.getString("withdraw")); // NOI18N
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
 
-        jButton18.setText("Cancel");
+        jButton18.setText(bundle.getString("cancel")); // NOI18N
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
@@ -1286,7 +1291,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         jLabel45.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel45.setText("Select agent:");
+        jLabel45.setText(bundle.getString("selectAgent")); // NOI18N
 
         jComboBox10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -1336,7 +1341,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel38.setBackground(new java.awt.Color(0, 100, 200));
         jLabel38.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel38.setText("  Withdraw agent from mission");
+        jLabel38.setText(bundle.getString("withdrawAgentFromMission")); // NOI18N
         jLabel38.setOpaque(true);
 
         javax.swing.GroupLayout withdrawDialogLayout = new javax.swing.GroupLayout(withdrawDialog.getContentPane());
@@ -1354,23 +1359,24 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        agentsOnMissionDialog.setTitle(bundle.getString("findAgentsOnMission")); // NOI18N
         agentsOnMissionDialog.setLocationByPlatform(true);
         agentsOnMissionDialog.setMinimumSize(new java.awt.Dimension(400, 225));
 
         jLabel39.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel39.setText("Select mission:");
+        jLabel39.setText(bundle.getString("selectMission")); // NOI18N
 
         jComboBox7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton19.setText("Find agents");
+        jButton19.setText(bundle.getString("find")); // NOI18N
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton19ActionPerformed(evt);
             }
         });
 
-        jButton20.setText("Cancel");
+        jButton20.setText(bundle.getString("cancel")); // NOI18N
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
@@ -1412,7 +1418,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel40.setBackground(new java.awt.Color(0, 100, 200));
         jLabel40.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel40.setText("  Find agents on mission");
+        jLabel40.setText(bundle.getString("findAgentsOnMission")); // NOI18N
         jLabel40.setOpaque(true);
 
         javax.swing.GroupLayout agentsOnMissionDialogLayout = new javax.swing.GroupLayout(agentsOnMissionDialog.getContentPane());
@@ -1430,23 +1436,24 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        missionWithAgentDialog.setTitle(bundle.getString("findMissionWithAgent")); // NOI18N
         missionWithAgentDialog.setLocationByPlatform(true);
         missionWithAgentDialog.setMinimumSize(new java.awt.Dimension(400, 225));
 
         jLabel41.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel41.setText("Select agent:");
+        jLabel41.setText(bundle.getString("selectAgent")); // NOI18N
 
         jComboBox8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton21.setText("Find mission");
+        jButton21.setText(bundle.getString("findMission")); // NOI18N
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
             }
         });
 
-        jButton22.setText("Cancel");
+        jButton22.setText(bundle.getString("cancel")); // NOI18N
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
@@ -1488,7 +1495,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel42.setBackground(new java.awt.Color(0, 100, 200));
         jLabel42.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel42.setText("  Find mission with agent");
+        jLabel42.setText(bundle.getString("findMissionWithAgent")); // NOI18N
         jLabel42.setOpaque(true);
 
         javax.swing.GroupLayout missionWithAgentDialogLayout = new javax.swing.GroupLayout(missionWithAgentDialog.getContentPane());
@@ -1506,23 +1513,24 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        availableAgentsDialog.setTitle(bundle.getString("findAvailableAgentsForMission")); // NOI18N
         availableAgentsDialog.setLocationByPlatform(true);
         availableAgentsDialog.setMinimumSize(new java.awt.Dimension(400, 225));
 
         jLabel43.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel43.setText("Select mission:");
+        jLabel43.setText(bundle.getString("selectMission")); // NOI18N
 
         jComboBox9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton23.setText("Find agents");
+        jButton23.setText(bundle.getString("find")); // NOI18N
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
 
-        jButton24.setText("Cancel");
+        jButton24.setText(bundle.getString("cancel")); // NOI18N
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
@@ -1564,7 +1572,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLabel44.setBackground(new java.awt.Color(0, 100, 200));
         jLabel44.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(255, 150, 0));
-        jLabel44.setText("  Find available agents for mission");
+        jLabel44.setText(bundle.getString("findAvailableAgentsForMission")); // NOI18N
         jLabel44.setOpaque(true);
 
         javax.swing.GroupLayout availableAgentsDialogLayout = new javax.swing.GroupLayout(availableAgentsDialog.getContentPane());
@@ -1598,11 +1606,12 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(800, 528));
 
         jTabbedPane2.setBackground(new java.awt.Color(100, 100, 100));
+        jTabbedPane2.setName(""); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(100, 100, 100));
         jPanel1.setPreferredSize(new java.awt.Dimension(932, 530));
 
-        addAgentButton.setText("add agent");
+        addAgentButton.setText(bundle.getString("addAgent")); // NOI18N
         addAgentButton.setName("addAgentButton"); // NOI18N
         addAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1610,7 +1619,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        editAgentButton.setText("edit agent");
+        editAgentButton.setText(bundle.getString("editAgent")); // NOI18N
         editAgentButton.setName("editAgentButton"); // NOI18N
         editAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1618,7 +1627,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        deleteAgentButton.setText("delete agent");
+        deleteAgentButton.setText(bundle.getString("deleteAgent")); // NOI18N
         deleteAgentButton.setName("deleteAgentButton"); // NOI18N
         deleteAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1626,7 +1635,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        findAgentButton.setText("find agent");
+        findAgentButton.setText(bundle.getString("findAgent")); // NOI18N
         findAgentButton.setName("findAgentButton"); // NOI18N
         findAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1712,7 +1721,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             missionsTable.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        addMissionButton.setText("add mission");
+        addMissionButton.setText(bundle.getString("addMission")); // NOI18N
         addMissionButton.setName("addMissionButton"); // NOI18N
         addMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1720,7 +1729,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        editMissionButton.setText("edit mission");
+        editMissionButton.setText(bundle.getString("editMission")); // NOI18N
         editMissionButton.setName("editMissionButton"); // NOI18N
         editMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1728,7 +1737,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        deleteMissionButton.setText("delete mission");
+        deleteMissionButton.setText(bundle.getString("deleteMission")); // NOI18N
         deleteMissionButton.setName("deleteMissionButton"); // NOI18N
         deleteMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1736,7 +1745,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
             }
         });
 
-        findMissionButton.setText("find mission");
+        findMissionButton.setText(bundle.getString("findMission")); // NOI18N
         findMissionButton.setName("findMissionButton"); // NOI18N
         findMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1758,7 +1767,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addComponent(deleteMissionButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(findMissionButton)
-                .addContainerGap(493, Short.MAX_VALUE))
+                .addContainerGap(544, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1797,7 +1806,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(0, 100, 200));
 
         assignAgentToMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        assignAgentToMissionButton.setText("assign agent to mission");
+        assignAgentToMissionButton.setText(bundle.getString("assignAgentToMission")); // NOI18N
         assignAgentToMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignAgentToMissionButtonActionPerformed(evt);
@@ -1805,7 +1814,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         findAgentsOnMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        findAgentsOnMissionButton.setText("find agents on mission");
+        findAgentsOnMissionButton.setText(bundle.getString("findAgentsOnMission")); // NOI18N
         findAgentsOnMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 findAgentsOnMissionButtonActionPerformed(evt);
@@ -1813,7 +1822,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         findMissionWithAgentButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        findMissionWithAgentButton.setText("find mission with agent");
+        findMissionWithAgentButton.setText(bundle.getString("findMissionWithAgent")); // NOI18N
         findMissionWithAgentButton.setToolTipText("");
         findMissionWithAgentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1822,7 +1831,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         findAvailableAgentsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        findAvailableAgentsButton.setText("find available agents");
+        findAvailableAgentsButton.setText(bundle.getString("findAvailableAgents")); // NOI18N
         findAvailableAgentsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 findAvailableAgentsButtonActionPerformed(evt);
@@ -1830,7 +1839,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         withdrawAgentFromMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        withdrawAgentFromMissionButton.setText("withdraw agent from mission");
+        withdrawAgentFromMissionButton.setText(bundle.getString("withdrawAgentFromMission")); // NOI18N
         withdrawAgentFromMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 withdrawAgentFromMissionButtonActionPerformed(evt);
@@ -1838,7 +1847,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
         });
 
         findAvailableAgentsForMissionButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        findAvailableAgentsForMissionButton.setText("find available agents for mission");
+        findAvailableAgentsForMissionButton.setText(bundle.getString("findAvailableAgentsForMission")); // NOI18N
         findAvailableAgentsForMissionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 findAvailableAgentsForMissionButtonActionPerformed(evt);
@@ -1858,15 +1867,11 @@ public class SwingGUI01 extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(findMissionWithAgentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(findAgentsOnMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(findAvailableAgentsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(findAvailableAgentsForMissionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(findAvailableAgentsForMissionButton, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                    .addComponent(findAvailableAgentsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1888,23 +1893,9 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         jMenuBar1.setName("AgentsTable"); // NOI18N
 
-        jMenu1.setText("File");
+        jMenu1.setText(bundle.getString("file")); // NOI18N
 
-        connectDBMenuItem.setText("Connect to DB");
-        jMenu1.add(connectDBMenuItem);
-
-        disconnectDBMenuItem.setText("Disconnect the DB");
-        disconnectDBMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                disconnectDBMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu1.add(disconnectDBMenuItem);
-
-        reloadDBMenuItem.setText("Reload the DB");
-        jMenu1.add(reloadDBMenuItem);
-
-        exitMenuItem.setText("Exit");
+        exitMenuItem.setText(bundle.getString("exit")); // NOI18N
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exitMenuItemActionPerformed(evt);
@@ -1914,7 +1905,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText(bundle.getString("edit")); // NOI18N
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -1956,10 +1947,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
         addAgentDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_addAgentButtonActionPerformed
 
-    private void disconnectDBMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disconnectDBMenuItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_disconnectDBMenuItemActionPerformed
-
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
@@ -1969,7 +1956,7 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         int agentRow = agentsTable.getSelectedRow();
         if (agentRow == -1) {
-            showErrorDialog("The is no selected agent, please select which one you want to edit");
+            showErrorDialog(ResourceBundle.getBundle("strings").getString("agentNotSelectedEdit"));
             return;
         }
 
@@ -2007,13 +1994,13 @@ public class SwingGUI01 extends javax.swing.JFrame {
 
         int agentRow = agentsTable.getSelectedRow();
         if (agentRow == -1) {
-            showErrorDialog("The is no selected agent, please select which one you want to delete");
+            showErrorDialog(ResourceBundle.getBundle("strings").getString("agentNotSelectedDelete"));
             return;
         }
 
         Agent agent = model.getSelectedAgent(agentRow);
         
-        deleteAgentDialogName.setText("\""+ agent.getName() + "\" ?");
+        deleteAgentDialogSureCheck.setText(ResourceBundle.getBundle("strings").getString("deleteAgentSureCheck") + " \""+ agent.getName() + "\" ?");
         deleteAgentDialog.setVisible(true);
         deleteAgentDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_deleteAgentButtonActionPerformed
@@ -2161,6 +2148,19 @@ public class SwingGUI01 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void assignAgentToMissionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignAgentToMissionButtonActionPerformed
+        
+        //agents
+        /*AgentsTableModel agentsModel = (AgentsTableModel) agentsTable.getModel();
+        
+        List<Agent> agents = agentsModel.getAllRows();
+        assignDialogAgentsComboBox.setModel(new DefaultComboBoxModel(agents.toArray()));
+        
+        //missions
+        MissionsTableModel missionsModel = (MissionsTableModel) missionsTable.getModel();
+        
+        List<Mission> missions = missionsModel.getAllRows();
+        assignDialogAgentsComboBox.setModel(new DefaultComboBoxModel(agents.toArray()));*/
+        
         assignDialog.setVisible(true);
         findMissionDialog.getContentPane().setBackground(Color.GRAY);
     }//GEN-LAST:event_assignAgentToMissionButtonActionPerformed
@@ -2231,6 +2231,10 @@ public class SwingGUI01 extends javax.swing.JFrame {
         findAgentDialog.setVisible(false);
     }//GEN-LAST:event_findAgentDialogFindAgentbuttonActionPerformed
 
+    private void findAgentDialogComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findAgentDialogComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_findAgentDialogComboBoxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2284,15 +2288,15 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JTable agentsTable;
     private javax.swing.JButton assignAgentToMissionButton;
     private javax.swing.JDialog assignDialog;
+    private javax.swing.JComboBox assignDialogAgentsComboBox;
+    private javax.swing.JComboBox assignDialogMissionsComboBox;
     private javax.swing.JDialog availableAgentsDialog;
-    private javax.swing.JMenuItem connectDBMenuItem;
     private javax.swing.JButton deleteAgentButton;
     private javax.swing.JDialog deleteAgentDialog;
     private javax.swing.JButton deleteAgentDialogDeleteButton;
-    private javax.swing.JLabel deleteAgentDialogName;
+    private javax.swing.JLabel deleteAgentDialogSureCheck;
     private javax.swing.JButton deleteMissionButton;
     private javax.swing.JDialog deleteMissionDialog;
-    private javax.swing.JMenuItem disconnectDBMenuItem;
     private javax.swing.JButton editAgentButton;
     private javax.swing.JDialog editAgentDialog;
     private com.toedter.calendar.JDateChooser editAgentDialogBorn;
@@ -2334,8 +2338,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox jComboBox10;
-    private javax.swing.JComboBox jComboBox11;
-    private javax.swing.JComboBox jComboBox12;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox4;
@@ -2350,7 +2352,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -2428,7 +2429,6 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     private javax.swing.JDialog missionWithAgentDialog;
     private javax.swing.JTable missionsTable;
-    private javax.swing.JMenuItem reloadDBMenuItem;
     private javax.swing.JButton withdrawAgentFromMissionButton;
     private javax.swing.JDialog withdrawDialog;
     // End of variables declaration//GEN-END:variables
@@ -2458,7 +2458,8 @@ public class SwingGUI01 extends javax.swing.JFrame {
     private void showErrorDialog(String errorMessage) {
 
         String[] choices = {"OK"};
-        int response = JOptionPane.showOptionDialog(this, errorMessage, "Error", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE, null, choices, choices[0]);
+        int response = JOptionPane.showOptionDialog(this, errorMessage, ResourceBundle.getBundle("strings").getString("error"), 
+                JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE, null, choices, choices[0]);
     }
 
     private void editAgentDialogReset(Agent agent) {
