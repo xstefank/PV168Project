@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="37" failures="0" name="agency.AgentManagerImplTest" time="3.801" errors="0" skipped="0">
+<testsuite tests="37" failures="0" name="agency.AgentManagerImplTest" time="6.974" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_31\jre\bin"/>
@@ -61,41 +61,41 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidName" time="0.129"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidBorn" time="0.123"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidLevel" time="0.171"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithNullId" time="0.102"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithNull" time="0.093"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithZeroId" time="0.11"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdWithNull" time="0.096"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidNote" time="0.138"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNull" time="0.119"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNullId" time="0.103"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidId" time="0.115"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithFakeId" time="0.134"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithInvalidIdZero" time="0.088"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testFindAllAgentsNoAgents" time="0.103"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithNullName" time="0.086"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentValidNullNote" time="0.099"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNullName" time="0.108"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentValid" time="0.096"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testFindAllAgents" time="0.101"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithNull" time="0.087"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdValid" time="0.102"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgent" time="0.102"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornFuture" time="0.123"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelZero" time="0.097"/>
-  <testcase classname="agency.AgentManagerImplTest" name="TestFindAgentByIdWithInvalidIdZero" time="0.095"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornNull" time="0.083"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornNull" time="0.088"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelZero" time="0.078"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelNegative" time="0.075"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornFuture" time="0.104"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornLess18" time="0.076"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdWithInvalidIdNegative" time="0.074"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelNegative" time="0.093"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornLess18" time="0.127"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithInvalidIdNegative" time="0.084"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelTooHigh" time="0.091"/>
-  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelTooHigh" time="0.094"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelZero" time="0.094"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornFuture" time="0.165"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornLess18" time="0.105"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelZero" time="0.119"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornFuture" time="0.107"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelTooHigh" time="0.153"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidLevelNegative" time="0.169"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelTooHigh" time="0.163"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidBornNull" time="0.184"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidLevelNegative" time="0.159"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornLess18" time="0.199"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithInvalidIdNegative" time="0.155"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdWithInvalidIdNegative" time="0.159"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithInvalidBornNull" time="0.165"/>
+  <testcase classname="agency.AgentManagerImplTest" name="TestFindAgentByIdWithInvalidIdZero" time="0.142"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentValidNullNote" time="0.14"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithNull" time="0.116"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNull" time="0.117"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidName" time="0.178"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidBorn" time="0.134"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidLevel" time="0.165"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNullId" time="0.112"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentValid" time="0.169"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithInvalidId" time="0.118"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithZeroId" time="0.102"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithNullName" time="0.156"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testCreateAgentWithNullName" time="1.725"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithNullId" time="0.129"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentWithFakeId" time="0.165"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithInvalidIdZero" time="0.096"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testUpdateAgentValidNote" time="0.216"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdValid" time="0.215"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgentWithNull" time="0.122"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testFindAgentByIdWithNull" time="0.125"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testFindAllAgentsNoAgents" time="0.185"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testFindAllAgents" time="0.114"/>
+  <testcase classname="agency.AgentManagerImplTest" name="testDeleteAgent" time="0.118"/>
 </testsuite>

@@ -81,7 +81,7 @@ public class Mission {
     
     @Override
     public String toString() {
-        return "Mission{" + "id=" + id + '}';
+        return "Mission {" + name + '}';
     }
 
     @Override

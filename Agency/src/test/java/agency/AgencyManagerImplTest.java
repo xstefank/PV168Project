@@ -111,6 +111,8 @@ public class AgencyManagerImplTest {
         assertNull("Found mission for agent even if the agent is not on any mission", result);
 
         //valid insert and find
+        agent02.setLevel(4);
+        agentManager.updateAgent(agent02);
         manager.assignAgentToMission(agent02, mission);
         result = manager.findMissionWithAgent(agent);
         assertEquals("Invalid mission returned", mission, result);
@@ -224,8 +226,14 @@ public class AgencyManagerImplTest {
         agent.setLevel(mission.getDifficulty() - 1);
         agentManager.updateAgent(agent);
 
-        boolean result = manager.assignAgentToMission(agent, mission);
-        assertFalse("Agent with no neccesery level for the mission difficulty assigned to the mission", result);
+        boolean result;
+
+        try {
+            result = manager.assignAgentToMission(agent, mission);
+            assertFalse("Agent with no neccesery level for the mission difficulty assigned to the mission", result);
+        } catch (IllegalArgumentException ex) {
+            //OK
+        }
 
         //create and test agent without putting him to DB - level 2
         Agent agent02 = newAgent02();
@@ -259,7 +267,11 @@ public class AgencyManagerImplTest {
         missionManager.createMission(mission02);
 
         //test assignment of an agent to another mission while he is already on one
-        assertFalse("Agent, who is already on the mission assigned to another one", manager.assignAgentToMission(agent, mission02));
+        try {
+            assertFalse("Agent, who is already on the mission assigned to another one", manager.assignAgentToMission(agent, mission02));
+        } catch (IllegalArgumentException ex) {
+            //OK
+        }
 
         //assign another agent to the mission with agents on
         agent02.setLevel(mission.getDifficulty());
@@ -277,10 +289,13 @@ public class AgencyManagerImplTest {
         missionManager.updateMission(mission);
         Agent agent03 = newAgent01();
         agentManager.createAgent(agent03);
-        
-        result = manager.assignAgentToMission(agent03, mission);
-        assertFalse("More agents assigned on the mission then is possible due to it's capacity", result);
-                
+
+        try {
+            result = manager.assignAgentToMission(agent03, mission);
+            assertFalse("More agents assigned on the mission then is possible due to it's capacity", result);
+        } catch (IllegalArgumentException ex) {
+            //OK
+        }
     }
 
     /**
@@ -520,7 +535,7 @@ public class AgencyManagerImplTest {
         Calendar missionBegin = new GregorianCalendar(2015, Calendar.JANUARY, 1);
         Calendar missionEnd = new GregorianCalendar(2015, Calendar.MARCH, 11);
 
-        return newMission("The Avengers",missionBegin.getTime(), missionEnd.getTime(), 3, 3, "code name - PV168");
+        return newMission("The Avengers", missionBegin.getTime(), missionEnd.getTime(), 3, 3, "code name - PV168");
     }
 
     private static Mission newMission02() {

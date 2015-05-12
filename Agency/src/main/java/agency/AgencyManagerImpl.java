@@ -25,6 +25,12 @@ public class AgencyManagerImpl implements AgencyManager {
 
     private DataSource dataSource;
 
+    public AgencyManagerImpl() {}
+    
+    public AgencyManagerImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }    
@@ -119,7 +125,15 @@ public class AgencyManagerImpl implements AgencyManager {
         } 
         
         if (mission.getCapacity() <= findAgentsOnMission(mission).size()){
-            return false;
+            throw new IllegalArgumentException("Mission has no sufficient capacity");
+        }
+        
+        if(agent.getLevel() < mission.getDifficulty()) {
+            throw new IllegalArgumentException("agent does not have a sufficient level for this mission");
+        }
+        
+        if(agent.getMissionId() != 0) {
+            throw new IllegalArgumentException("Agent is already on a mission");
         }
         
         try (Connection conn = dataSource.getConnection()) {
@@ -135,6 +149,7 @@ public class AgencyManagerImpl implements AgencyManager {
                     return false;
                 }
                 
+                agent.setMissionId(mission.getId());
                 return true;
                                                 
             }
@@ -174,6 +189,8 @@ public class AgencyManagerImpl implements AgencyManager {
                 if(res != 1) {
                     throw new IllegalArgumentException("Error removing agent from mission");
                 }
+                
+                agent.setMissionId(Long.valueOf(0));
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);

@@ -76,6 +76,7 @@ public class AgentManagerImpl implements AgentManager {
 
                 ResultSet keyRS = st.getGeneratedKeys();
                 agent.setId(getKey(keyRS, agent));
+                agent.setMissionId(Long.valueOf(0));
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
@@ -191,7 +192,7 @@ public class AgentManagerImpl implements AgentManager {
         }
 
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",born,level,note FROM APP.Agents WHERE id=?")) {
+            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",born,level,note,missionId FROM APP.Agents WHERE id=?")) {
 
                 st.setLong(1, agentId);
                 ResultSet rs = st.executeQuery();
@@ -222,6 +223,7 @@ public class AgentManagerImpl implements AgentManager {
         agent.setBorn(rs.getDate("born"));
         agent.setLevel(rs.getInt("level"));
         agent.setNote(rs.getString("note"));
+        agent.setMissionId(rs.getLong("missionId"));
         
         return agent;
     }
@@ -231,7 +233,7 @@ public class AgentManagerImpl implements AgentManager {
         log.debug("findAllAgents called");
         
         try (Connection conn = dataSource.getConnection()) {
-            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",born,level,note FROM APP.Agents")) {
+            try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",born,level,note,missionId FROM APP.Agents")) {
 
                ResultSet rs = st.executeQuery();
                

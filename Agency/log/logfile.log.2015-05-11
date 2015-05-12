@@ -1,0 +1,355 @@
+09-05-2015 00:02:38 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:04:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:05:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:05:55 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:07:28 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:07:57 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:08:22 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:09:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:09:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:10:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:12:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:12:25 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:12:25 ERROR [AWT-EventQueue-0] - common.SwingGUI01.agentDialogAddAgentButtonActionPerformed 2209 - Add agent exception
+java.lang.IllegalArgumentException: agent cannot have an empty name
+	at agency.AgentManagerImpl.validateAgentsAttributes(AgentManagerImpl.java:259)
+	at agency.AgentManagerImpl.createAgent(AgentManagerImpl.java:60)
+	at common.SwingGUI01.agentDialogAddAgentButtonActionPerformed(SwingGUI01.java:2207)
+	at common.SwingGUI01.access$000(SwingGUI01.java:31)
+	at common.SwingGUI01$1.actionPerformed(SwingGUI01.java:289)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2346)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6525)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.Container.processEvent(Container.java:2234)
+	at java.awt.Component.dispatchEventImpl(Component.java:4881)
+	at java.awt.Container.dispatchEventImpl(Container.java:2292)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4898)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4533)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4462)
+	at java.awt.Container.dispatchEventImpl(Container.java:2278)
+	at java.awt.Window.dispatchEventImpl(Window.java:2750)
+	at java.awt.Component.dispatchEvent(Component.java:4703)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+09-05-2015 00:13:42 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:14:23 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:16:09 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:27:56 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:27:58 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:28:39 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:28:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:29:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:29:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:32:01 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:32:03 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:33 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:36 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:38:49 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:40:17 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:41:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+09-05-2015 00:42:16 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+09-05-2015 00:42:26 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:01 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:02 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:03 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:03 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:04 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:05 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.deleteAgent 150 - deleteAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.findAgentById 183 - findAgentById called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.updateAgent 111 - updateAgent called
+11-05-2015 11:56:06 DEBUG [main] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.findAllMissions 183 - findAllMissions called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.findMissionById 152 - findMissionById called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.deleteMission 105 - deleteMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:07 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:08 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.findMissionById 152 - findMissionById called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.findMissionById 152 - findMissionById called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.findMissionById 152 - findMissionById called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.deleteMission 105 - deleteMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.deleteMission 105 - deleteMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.findAllMissions 183 - findAllMissions called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.createMission 35 - createMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.updateMission 73 - updateMission called
+11-05-2015 11:56:09 DEBUG [main] - agency.MissionManagerImpl.deleteMission 105 - deleteMission called
+11-05-2015 11:56:29 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 11:57:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.createAgent 50 - createAgent called
+11-05-2015 18:45:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 18:45:31 ERROR [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 248 - DB connection problem
+java.sql.SQLException: Cannot create PoolableConnectionFactory (java.net.ConnectException : Error connecting to server localhost on port 1,527 with message Connection refused: connect.)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2291)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2038)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1533)
+	at agency.AgentManagerImpl.findAllAgents(AgentManagerImpl.java:233)
+	at common.SwingGUI01.<init>(SwingGUI01.java:72)
+	at common.SwingGUI01$49.run(SwingGUI01.java:2264)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:749)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:702)
+	at java.awt.EventQueue$3.run(EventQueue.java:696)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:719)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+Caused by: java.sql.SQLNonTransientConnectionException: java.net.ConnectException : Error connecting to server localhost on port 1,527 with message Connection refused: connect.
+	at org.apache.derby.client.am.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.client.am.SqlException.getSQLException(Unknown Source)
+	at org.apache.derby.jdbc.ClientDriver.connect(Unknown Source)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:39)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:256)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2301)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2287)
+	... 19 more
+Caused by: ERROR 08001: java.net.ConnectException : Error connecting to server localhost on port 1,527 with message Connection refused: connect.
+	at org.apache.derby.client.net.NetAgent.<init>(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.newAgent_(Unknown Source)
+	at org.apache.derby.client.am.ClientConnection.<init>(Unknown Source)
+	at org.apache.derby.client.net.NetConnection.<init>(Unknown Source)
+	at org.apache.derby.client.net.ClientJDBCObjectFactoryImpl.newNetConnection(Unknown Source)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at javax.net.DefaultSocketFactory.createSocket(SocketFactory.java:271)
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source)
+	at org.apache.derby.client.net.OpenSocketAction.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	... 29 more
+11-05-2015 18:46:14 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 18:47:04 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 18:47:28 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 18:53:19 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:06:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:14:31 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:17:43 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:24:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:26:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:28:26 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:28:57 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:30:03 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:31:12 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:33:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:34:06 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:36:13 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:36:41 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:45:02 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:47:08 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:47:52 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:51:20 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:52:27 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:54:47 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:56:34 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:57:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:57:51 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 19:58:37 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:00:13 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:02:30 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:03:34 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:06:19 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:07:48 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:10:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:10:19 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:11:11 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:14:09 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:16:40 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:41:07 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:41:52 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:42:09 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:45:00 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:45:14 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:48:56 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:49:18 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:54:13 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:54:28 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:57:05 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called
+11-05-2015 20:57:16 DEBUG [AWT-EventQueue-0] - agency.AgentManagerImpl.findAllAgents 231 - findAllAgents called

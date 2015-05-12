@@ -17,6 +17,7 @@ public class Agent {
     private Date born;
     private int level;      //changed due to the UML
     private String note;
+    private Long missionId;
 
     public Agent() {
     }
@@ -60,10 +61,20 @@ public class Agent {
     public void setNote(String note) {
         this.note = note;
     }
+
+    public Long getMissionId() {
+        return missionId;
+    }
+
+    public void setMissionId(Long missionId) {
+        this.missionId = missionId;
+    }
+    
+    
     
     @Override
     public String toString() {
-        return "Agent{" + name + '}';
+        return "Agent {" + name + '}';
     }
 
     @Override

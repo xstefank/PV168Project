@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="agency.AgencyManagerImplTest" time="1.808" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="agency.AgencyManagerImplTest" time="2.081" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_31\jre\bin"/>
@@ -61,10 +61,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="agency.AgencyManagerImplTest" name="testFindAvailableAgentsForMission" time="0.687"/>
-  <testcase classname="agency.AgencyManagerImplTest" name="testFindMissionWithAgent" time="0.222"/>
-  <testcase classname="agency.AgencyManagerImplTest" name="testAssignAgentToMission" time="0.25"/>
-  <testcase classname="agency.AgencyManagerImplTest" name="testFindAvailableAgents" time="0.192"/>
-  <testcase classname="agency.AgencyManagerImplTest" name="testFindAgentsOnMission" time="0.199"/>
-  <testcase classname="agency.AgencyManagerImplTest" name="testWithdrawAgentFromMission" time="0.147"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testFindAvailableAgentsForMission" time="1.009"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testFindAgentsOnMission" time="0.142"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testFindMissionWithAgent" time="0.155"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testFindAvailableAgents" time="0.137"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testAssignAgentToMission" time="0.325"/>
+  <testcase classname="agency.AgencyManagerImplTest" name="testWithdrawAgentFromMission" time="0.137"/>
 </testsuite>

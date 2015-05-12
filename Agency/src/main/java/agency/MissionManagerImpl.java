@@ -20,10 +20,16 @@ import org.apache.log4j.Logger;
  * @author martin
  */
 public class MissionManagerImpl implements MissionManager {
-     
-     private final Logger log = Logger.getLogger(Agency.class);
+
+    private final Logger log = Logger.getLogger(Agency.class);
+
+    private DataSource dataSource;
+
+    public MissionManagerImpl() {}
     
-     private DataSource dataSource;
+    public MissionManagerImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
@@ -31,11 +37,11 @@ public class MissionManagerImpl implements MissionManager {
 
     @Override
     public void createMission(Mission mission) {
-        
+
         log.debug("createMission called");
-        
+
         testMissionParameter(mission);
-        
+
         if (mission.getId() != null) {
             throw new IllegalArgumentException("Mission already created.");
         }
@@ -69,11 +75,11 @@ public class MissionManagerImpl implements MissionManager {
 
     @Override
     public void updateMission(Mission mission) {
-        
+
         log.debug("updateMission called");
-        
+
         testMissionParameter(mission);
-        
+
         if (mission.getId() == null) {
             throw new IllegalArgumentException("Mission not created.");
         }
@@ -101,9 +107,9 @@ public class MissionManagerImpl implements MissionManager {
 
     @Override
     public void deleteMission(Mission mission) {
-        
+
         log.debug("deleteMission called");
-        
+
         if (mission == null) {
             throw new NullPointerException("Mission can not be null.");
         }
@@ -112,29 +118,27 @@ public class MissionManagerImpl implements MissionManager {
         }
 
         //why comment ??
-        
-       /* Mission missionDB = findMissionById(mission.getId());
+        /* Mission missionDB = findMissionById(mission.getId());
 
-        if (!mission.getBeginDate().equals(missionDB.getBeginDate())) {
-            throw new IllegalArgumentException("BeginDate does not match.");
-        }
-        if (!mission.getEndDate().equals(missionDB.getEndDate())) {
-            throw new IllegalArgumentException("EndDate does not match.");
-        }
-        if (mission.getDifficulty() != missionDB.getDifficulty()) {
-            throw new IllegalArgumentException("Difficulty does not match.");
-        }
-        if (mission.getCapacity() != missionDB.getCapacity()) {
-            throw new IllegalArgumentException("Capacity does not match.");
-        }
-        if (!mission.getNote().equals(missionDB.getNote())) {
-            throw new IllegalArgumentException("Note does not match.");
-        }*/
-        
+         if (!mission.getBeginDate().equals(missionDB.getBeginDate())) {
+         throw new IllegalArgumentException("BeginDate does not match.");
+         }
+         if (!mission.getEndDate().equals(missionDB.getEndDate())) {
+         throw new IllegalArgumentException("EndDate does not match.");
+         }
+         if (mission.getDifficulty() != missionDB.getDifficulty()) {
+         throw new IllegalArgumentException("Difficulty does not match.");
+         }
+         if (mission.getCapacity() != missionDB.getCapacity()) {
+         throw new IllegalArgumentException("Capacity does not match.");
+         }
+         if (!mission.getNote().equals(missionDB.getNote())) {
+         throw new IllegalArgumentException("Note does not match.");
+         }*/
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("DELETE FROM APP.Missions WHERE id=?")) {
                 st.setLong(1, mission.getId());
-                
+
                 if (st.executeUpdate() != 1) {
                     throw new InternalError("Internal Error: Did not delete mission with id =" + mission.getId());
                 }
@@ -148,9 +152,9 @@ public class MissionManagerImpl implements MissionManager {
 
     @Override
     public Mission findMissionById(Long missionId) {
-        
+
         log.debug("findMissionById called");
-        
+
         if (missionId == null) {
             throw new IllegalArgumentException("MissionId can not be null");
         }
@@ -179,9 +183,9 @@ public class MissionManagerImpl implements MissionManager {
 
     @Override
     public List<Mission> findAllMissions() {
-        
+
         log.debug("findAllMissions called");
-        
+
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT id,\"name\",beginDate,endDate,capacity,difficulty,note FROM APP.Missions")) {
                 ResultSet rs = st.executeQuery();
