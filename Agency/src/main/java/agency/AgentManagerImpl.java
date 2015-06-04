@@ -14,6 +14,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.ResourceBundle;
 import javax.sql.DataSource;
 import org.apache.log4j.Logger;
 
@@ -50,11 +51,11 @@ public class AgentManagerImpl implements AgentManager {
         log.debug("createAgent called");
         
         if (agent == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }
 
         if (agent.getId() != null) {
-            throw new IllegalArgumentException("agent is already set");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentAlreadyInDB"));
         }
 
         validateAgentsAttributes(agent);
@@ -80,7 +81,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("createAgentDB"), ex);
         }
 
     }
@@ -112,15 +113,15 @@ public class AgentManagerImpl implements AgentManager {
         log.debug("updateAgent called");
         
         if (agent == null) {
-            throw new IllegalArgumentException("cannot update a null agent");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }
 
         if (agent.getId() == null) {
-            throw new IllegalArgumentException("cannot update agent with null id");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         }
 
         if (agent.getName() == null) {
-            throw new IllegalArgumentException("cannot update agent with nulll name");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNullName"));
         }
 
         validateAgentsAttributes(agent);
@@ -140,7 +141,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("updateAgentDB"), ex);
         }
 
     }
@@ -151,11 +152,11 @@ public class AgentManagerImpl implements AgentManager {
         log.debug("deleteAgent called");
         
         if (agent == null) {
-            throw new IllegalArgumentException("cannot delete a null agent");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }
 
         if (agent.getId() == null) {
-            throw new IllegalArgumentException("cannot delete agent with null id");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         }
 
         if (agent.getId() <= 0) {
@@ -173,7 +174,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("deleteAgentDB"), ex);
         }
         
     }
@@ -211,7 +212,7 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findAgentByIdDB"), ex);
         }
     }
     
@@ -248,40 +249,40 @@ public class AgentManagerImpl implements AgentManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findAllAgentsDB"), ex);
         }
     }
 
     private void validateAgentsAttributes(Agent agent) {
         if (agent.getName() == null) {
-            throw new IllegalArgumentException("agent cannot have a null name");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNullName"));
         }
         
         if(agent.getName().equals("")) {
-            throw new IllegalArgumentException("agent cannot have an empty name");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNullName"));
         }
 
         if (agent.getBorn() == null) {
-            throw new IllegalArgumentException("agent cannot have a null date of birth");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNullBorn"));
         }
 
         if (agent.getBorn().after(Calendar.getInstance().getTime())) {
-            throw new IllegalArgumentException("agent cannot be born in future");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentFutureBorn"));
         }
 
         Calendar less18 = Calendar.getInstance();
         less18.add(Calendar.YEAR, -18);
         less18.add(Calendar.SECOND, -30);
         if (agent.getBorn().after(less18.getTime()) || agent.getBorn().equals(less18.getTime())) {
-            throw new IllegalArgumentException("agent cannot be less than 18 years old");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentTooYoung"));
         }
 
         if (agent.getLevel() <= 0) {
-            throw new IllegalArgumentException("agent cannot have negative or zero level");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentTooLowLevel"));
         }
 
         if (agent.getLevel() > 10) {
-            throw new IllegalArgumentException("agent cannot have level higher than 10");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentTooHighLevel"));
         }
     }
 

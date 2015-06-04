@@ -12,6 +12,7 @@ import java.util.List;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import org.apache.log4j.Logger;
 
 
@@ -37,7 +38,7 @@ public class AgencyManagerImpl implements AgencyManager {
 
     private void checkDataSource() {
         if (dataSource == null) {
-            throw new IllegalStateException("DataSource is not set");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("dataSourceNotSet"));
         }
     }
     
@@ -47,11 +48,11 @@ public class AgencyManagerImpl implements AgencyManager {
         checkDataSource();        
         
         if (agent == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }        
         
         if (agent.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         }        
         
         try (Connection conn = dataSource.getConnection()) {
@@ -71,7 +72,7 @@ public class AgencyManagerImpl implements AgencyManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when finding mission with agent " + agent, ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionWithAgentDB") + " " + agent, ex);
         }
     }
     
@@ -79,11 +80,11 @@ public class AgencyManagerImpl implements AgencyManager {
     public List<Agent> findAgentsOnMission(Mission mission) {
         
         if (mission == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }        
         
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         } 
         
         try (Connection conn = dataSource.getConnection()) {
@@ -101,7 +102,7 @@ public class AgencyManagerImpl implements AgencyManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when finding agents on mission " + mission, ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentsOnMissionDB") + " " + mission, ex);
         }
     }
     
@@ -109,40 +110,43 @@ public class AgencyManagerImpl implements AgencyManager {
     public boolean assignAgentToMission(Agent agent, Mission mission) {
         
         if (agent == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }        
         
         if (agent.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         } 
         
         if (mission == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullMission"));
         }        
         
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNotInDB"));
         } 
         
         if (mission.getCapacity() <= findAgentsOnMission(mission).size()){
-            throw new IllegalArgumentException("Mission has no sufficient capacity");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionLowCapacity"));
         }
         
         if(agent.getLevel() < mission.getDifficulty()) {
-            throw new IllegalArgumentException("agent does not have a sufficient level for this mission");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentLowLevel"));
         }
         
         if(agent.getMissionId() != 0) {
-            throw new IllegalArgumentException("Agent is already on a mission");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentIsOnMission"));
+        }
+        
+        if(agent.getLevel() < mission.getDifficulty()) {
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentLowLevel"));
         }
         
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement(
-                                            "UPDATE APP.Agents SET APP.Agents.missionId = ? WHERE APP.Agents.id = ? AND APP.Agents.missionId IS NULL AND level >= ?")) {
+                                            "UPDATE APP.Agents SET APP.Agents.missionId = ? WHERE APP.Agents.id = ? AND APP.Agents.missionId IS NULL")) {
                 
                 st.setLong(1, mission.getId());
                 st.setLong(2, agent.getId());
-                st.setInt(3, mission.getDifficulty());
                 
                 int res = st.executeUpdate();
                 if(res != 1) {
@@ -155,7 +159,7 @@ public class AgencyManagerImpl implements AgencyManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when assigning agent " + agent + " to mission " + mission, ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("assignAgentDB") + " " + agent + " " + ResourceBundle.getBundle("strings").getString("toMission") + " " + mission, ex);
         }
     }
     
@@ -163,19 +167,19 @@ public class AgencyManagerImpl implements AgencyManager {
     public void withdrawAgentFromMission(Agent agent, Mission mission) {
         
         if (agent == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }        
         
         if (agent.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         } 
         
         if (mission == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullMission"));
         }        
         
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNotInDB"));
         } 
         
         try (Connection conn = dataSource.getConnection()) {
@@ -187,14 +191,14 @@ public class AgencyManagerImpl implements AgencyManager {
                 
                 int res = st.executeUpdate();
                 if(res != 1) {
-                    throw new IllegalArgumentException("Error removing agent from mission");
+                    throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("withdrawAgentDB") + " " + agent + " " + ResourceBundle.getBundle("strings").getString("fromMission") + " " + mission);
                 }
                 
                 agent.setMissionId(Long.valueOf(0));
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when withdrawing agnet " + agent + " from mission " + mission, ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("withdrawAgentDB") + " " + agent + " " + ResourceBundle.getBundle("strings").getString("fromMission") + " " + mission, ex);
         }
     }
     
@@ -216,7 +220,7 @@ public class AgencyManagerImpl implements AgencyManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when retrieving all available agents", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findAgentsDB"), ex);
         }
     }
     
@@ -224,11 +228,11 @@ public class AgencyManagerImpl implements AgencyManager {
     public List<Agent> findAvailableAgentsForMission(Mission mission) {
         
         if (mission == null) {
-            throw new IllegalArgumentException("agent is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullAgent"));
         }        
         
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("agent id is null");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("agentNotInDB"));
         } 
         
         try (Connection conn = dataSource.getConnection()) {
@@ -247,7 +251,7 @@ public class AgencyManagerImpl implements AgencyManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when retrieving available agents for mission" + mission, ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findAgentsForMissionDB") + " " + mission, ex);
         }
     }
     

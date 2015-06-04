@@ -77,7 +77,7 @@ public class MissionManagerImplTest {
         try {
             manager.createMission(null);
             fail("Can create null mission.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
     }
          
@@ -89,7 +89,7 @@ public class MissionManagerImplTest {
         try {
             manager.createMission(mission);
             fail("Can create mission with null beginDate.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
         
         mission.setBeginDate(new GregorianCalendar(2001, 7, 15).getTime());
@@ -97,7 +97,7 @@ public class MissionManagerImplTest {
         try {
             manager.createMission(mission);
             fail("Can create mission with null endDate.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }
     }
         
@@ -211,7 +211,7 @@ public class MissionManagerImplTest {
         try {
             manager.updateMission(null);
             fail("Can update null mission.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
     }
     
@@ -220,15 +220,15 @@ public class MissionManagerImplTest {
         Mission mission = newMission();
         try {
             manager.createMission(mission);
-        } catch (NullPointerException ex) {
-            fail("Method createMission should not throw NullPointerException.");
+        } catch (IllegalArgumentException ex) {
+            fail("Method createMission should not throw IllegalArgumentException.");
         }
         
         mission.setBeginDate(null);
         try {
             manager.updateMission(mission);
             fail("Can update mission with null beginDate.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
         
         mission.setBeginDate(new GregorianCalendar(2001, 7, 15).getTime());
@@ -236,7 +236,7 @@ public class MissionManagerImplTest {
         try {
             manager.updateMission(mission);
             fail("Can update mission with null endDate.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
     }      
         
@@ -373,7 +373,7 @@ public class MissionManagerImplTest {
         try {
             manager.deleteMission(null);
             fail("Can delete null mission.");
-        } catch (NullPointerException ex) {
+        } catch (IllegalArgumentException ex) {
         }  
     }
     

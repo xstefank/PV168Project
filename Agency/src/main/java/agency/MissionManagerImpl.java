@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import javax.sql.DataSource;
 import org.apache.log4j.Logger;
 
@@ -43,7 +44,7 @@ public class MissionManagerImpl implements MissionManager {
         testMissionParameter(mission);
 
         if (mission.getId() != null) {
-            throw new IllegalArgumentException("Mission already created.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionAlreadyInDB"));
         }
 
         try (Connection conn = dataSource.getConnection()) {
@@ -68,7 +69,7 @@ public class MissionManagerImpl implements MissionManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("createMissionDB"), ex);
         }
 
     }
@@ -81,7 +82,7 @@ public class MissionManagerImpl implements MissionManager {
         testMissionParameter(mission);
 
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("Mission not created.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNotInDB"));
         }
 
         try (Connection conn = dataSource.getConnection()) {
@@ -101,7 +102,7 @@ public class MissionManagerImpl implements MissionManager {
             }
         } catch (SQLException ex) {
             log.error("DB connection problem", ex);
-            throw new IllegalStateException("Error connecting to the DB", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("updateMissionDB"), ex);
         }
     }
 
@@ -111,10 +112,10 @@ public class MissionManagerImpl implements MissionManager {
         log.debug("deleteMission called");
 
         if (mission == null) {
-            throw new NullPointerException("Mission can not be null.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullMission"));
         }
         if (mission.getId() == null) {
-            throw new IllegalArgumentException("Mission not created.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNotInDB"));
         }
 
         //why comment ??
@@ -145,7 +146,7 @@ public class MissionManagerImpl implements MissionManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when retrieving all missions", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("MissionDB"), ex);
         }
 
     }
@@ -177,7 +178,7 @@ public class MissionManagerImpl implements MissionManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when retrieving all graves", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findMissionByIdDB"), ex);
         }
     }
 
@@ -197,31 +198,31 @@ public class MissionManagerImpl implements MissionManager {
             }
         } catch (SQLException ex) {
             log.error("db connection problem", ex);
-            throw new IllegalStateException("Error when retrieving all missions", ex);
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("findAllMissionsDB"), ex);
         }
     }
 
     private void testMissionParameter(Mission mission) {
         if (mission == null) {
-            throw new NullPointerException("Mission can not be null.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("nullMission"));
         }
         if (mission.getBeginDate() == null) {
-            throw new NullPointerException("BeginDate can not be null.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNullBeginDate"));
         }
         if (mission.getEndDate() == null) {
-            throw new NullPointerException("EndDate can not be null.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionNullEndDate"));
         }
         if (mission.getBeginDate().after(mission.getEndDate())) {
-            throw new IllegalArgumentException("EndDate can not be before beginDate.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionEndBeforeBegin"));
         }
         if (mission.getCapacity() < 1) {
-            throw new IllegalArgumentException("Capacity can not be lower than 1.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionTooLowCapacity"));
         }
         if (mission.getDifficulty() < 1) {
-            throw new IllegalArgumentException("Difficulty can not be lower than 1.");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionTooLowDifficulty"));
         }
         if (mission.getDifficulty() > 10) {
-            throw new IllegalArgumentException("Difficulty can not be higher than 10");
+            throw new IllegalArgumentException(ResourceBundle.getBundle("strings").getString("missionTooHighDifficulty"));
         }
     }
 
